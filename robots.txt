@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yudi8377.github.io/GRC-E-commerce/sitemap.xml
