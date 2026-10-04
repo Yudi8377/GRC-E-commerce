@@ -177,9 +177,9 @@ label{display:block;color:#4f5653;font-size:.85em;font-weight:400;margin-bottom:
 
 <section id="kontak" class="box special contactPanel container">
   <div class="contactGrid">
-    <div><h2>Konsultasikan kebutuhan proyek.</h2><p>Hubungi tim penjualan untuk harga, stok, spesifikasi, pengiriman dan penawaran proyek.</p><button class="button primary" onclick="openOrderForm()">Buat Permintaan Penawaran</button></div>
+    <div><h2>Konsultasikan kebutuhan proyek.</h2><p>Hubungi tim penjualan untuk harga, stok, spesifikasi, pengiriman dan penawaran proyek.</p><button class="button primary" onclick="openQuoteForm()">Buat Permintaan Penawaran</button></div>
     <div>
-      <div class="contactItem"><span>WhatsApp / Telepon</span><b><a href="tel:+6281330438378" style="color:#fff;border-bottom:0">+62 813-3043-8378</a></b><button class="button" style="margin-top:.6em" onclick="openOrderForm()">Konsultasi via WhatsApp →</button></div>
+      <div class="contactItem"><span>WhatsApp / Telepon</span><b><a href="tel:+6281330438378" style="color:#fff;border-bottom:0">+62 813-3043-8378</a></b><button class="button" style="margin-top:.6em" onclick="openConsultationForm()">Konsultasi via WhatsApp →</button></div>
       <div class="contactItem"><span>Email</span><b>Kontak melalui WhatsApp</b></div>
       <div class="contactItem"><span>Layanan</span><b>Konfirmasi layanan melalui WhatsApp</b></div>
     </div>
@@ -203,21 +203,42 @@ label{display:block;color:#4f5653;font-size:.85em;font-weight:400;margin-bottom:
 
 <div id="quoteModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
   <div class="modalCard">
-    <div class="modalHead"><h3 id="quoteTitle">Konsultasi, Penawaran & Pemesanan</h3><button onclick="closeOrderForm()">✕</button></div>
+    <div class="modalHead"><h3 id="quoteTitle">Permintaan Penawaran</h3><button onclick="closeOrderForm()">✕</button></div>
     <div class="quoteForm">
+      <p id="formIntro" style="margin-bottom:1.2em">Isi data komersial dan kebutuhan proyek agar tim dapat menyiapkan penawaran yang lebih tepat.</p>
       <div class="formgrid">
-        <div><label>Nama</label><input id="qName" placeholder="Nama lengkap"></div>
-        <div><label>Perusahaan / Instansi</label><input id="qCompany" placeholder="Opsional"></div>
-        <div><label>No. WhatsApp</label><input id="qPhone" placeholder="08xxxxxxxxxx"></div>
-        <div><label>Kota / Kabupaten Pengiriman</label><input id="qCity" placeholder="Contoh: Jakarta Selatan"></div>
+        <div><label>Nama *</label><input id="qName" placeholder="Nama lengkap"></div>
+        <div><label>Perusahaan / Instansi</label><input id="qCompany" placeholder="Nama perusahaan / instansi"></div>
+        <div><label>No. WhatsApp *</label><input id="qPhone" placeholder="08xxxxxxxxxx"></div>
+        <div><label>Kota / Kabupaten Pengiriman *</label><input id="qCity" placeholder="Contoh: Jakarta Selatan"></div>
         <div><label>Jenis Proyek</label><select id="qProject"><option>Rumah Tinggal</option><option>Komersial</option><option>Kontraktor / Developer</option><option>Instansi</option><option>Renovasi</option><option>Lainnya</option></select></div>
-        <div><label>Produk / Material</label><select id="qProduct"><option>GRC 4–5 mm · GRC-INT-45</option><option>GRC 6 mm · GRC-COV-06</option><option>GRC 8 mm · GRC-WAL-08</option><option>GRC 10 mm · GRC-EXT-10</option><option>Belum menentukan · perlu konsultasi</option></select></div>
-        <div><label>Perkiraan luas / jumlah</label><input id="qQty" placeholder="Contoh: 50 m² / 20 lembar"></div>
-        <div><label>Perkiraan waktu kebutuhan</label><input id="qDate" placeholder="Contoh: November 2026"></div>
-        <div class="full"><label>Kebutuhan / catatan proyek</label><textarea id="qNotes" rows="4" placeholder="Aplikasi, lokasi proyek, kebutuhan pemasangan, RAB/quotation atau pertanyaan teknis."></textarea></div>
+        <div><label>Produk / Material *</label><select id="qProduct"><option>GRC 4–5 mm · GRC-INT-45</option><option>GRC 6 mm · GRC-COV-06</option><option>GRC 8 mm · GRC-WAL-08</option><option>GRC 10 mm · GRC-EXT-10</option><option>Belum menentukan · perlu konsultasi</option></select></div>
+        <div><label>Perkiraan luas / jumlah *</label><input id="qQty" placeholder="Contoh: 50 m² / 20 lembar"></div>
+        <div><label>Target pengiriman / kebutuhan</label><input id="qDate" placeholder="Contoh: November 2026"></div>
+        <div class="full"><label>Detail kebutuhan penawaran</label><textarea id="qNotes" rows="4" placeholder="Contoh: kebutuhan per m², jumlah lembar, spesifikasi, finishing, lokasi proyek, atau kebutuhan RAB."></textarea></div>
       </div>
     </div>
-    <div class="quoteActions"><button onclick="closeOrderForm()">Batal</button><button class="button primary" onclick="sendOrderRequest()">Kirim ke WhatsApp →</button></div>
+    <div class="quoteActions"><button onclick="closeOrderForm()">Batal</button><button class="button primary" onclick="sendOrderRequest()">Kirim Permintaan Penawaran →</button></div>
+  </div>
+</div>
+
+<div id="consultationModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="consultationTitle">
+  <div class="modalCard">
+    <div class="modalHead"><h3 id="consultationTitle">Konsultasi Teknis GRC</h3><button onclick="closeConsultationForm()">✕</button></div>
+    <div class="quoteForm">
+      <p style="margin-bottom:1.2em">Form ini khusus untuk memahami kebutuhan teknis. Tidak perlu mengisi data penawaran atau jumlah pembelian terlebih dahulu.</p>
+      <div class="formgrid">
+        <div><label>Nama *</label><input id="cName" placeholder="Nama lengkap"></div>
+        <div><label>No. WhatsApp *</label><input id="cPhone" placeholder="08xxxxxxxxxx"></div>
+        <div><label>Lokasi / Kota Proyek *</label><input id="cCity" placeholder="Contoh: Depok"></div>
+        <div><label>Aplikasi GRC *</label><select id="cApplication"><option>Ceiling / Plafon</option><option>Partition / Partisi</option><option>Cladding / Eksterior</option><option>Lisplank</option><option>Dinding / Lining</option><option>Belum yakin · minta rekomendasi</option></select></div>
+        <div><label>Kondisi penggunaan</label><select id="cEnvironment"><option>Interior</option><option>Eksterior</option><option>Area lembap</option><option>Belum ditentukan</option></select></div>
+        <div><label>Perkiraan luas bidang</label><input id="cArea" placeholder="Contoh: 30 m²"></div>
+        <div class="full"><label>Ukuran / kondisi bidang</label><input id="cDimension" placeholder="Contoh: ruang 4 × 5 m, tinggi 3 m, rangka hollow sudah tersedia"></div>
+        <div class="full"><label>Pertanyaan teknis *</label><textarea id="cQuestion" rows="5" placeholder="Contoh: ketebalan yang cocok, jenis rangka, jarak pengikat, sambungan, finishing, atau cara menghitung kebutuhan."></textarea></div>
+      </div>
+    </div>
+    <div class="quoteActions"><button onclick="closeConsultationForm()">Batal</button><button class="button primary" onclick="sendConsultationRequest()">Kirim Konsultasi ke WhatsApp →</button></div>
   </div>
 </div>
 
@@ -226,15 +247,19 @@ const SALES={whatsapp:"6281330438378"};
 const $=id=>document.getElementById(id);
 function openWhatsApp(message){const n=SALES.whatsapp;if(!n){alert("Nomor WhatsApp sales belum diisi.");return}window.open("https://wa.me/"+n+"?text="+encodeURIComponent(message),"_blank","noopener")}
 function openOrderForm(product=""){ $("quoteModal").classList.add("open"); if(product){const s=$("qProduct");[...s.options].some(o=>{if(o.textContent.startsWith(product)){s.value=o.value;return true}return false})} $("qName").focus() }
+function openQuoteForm(product=""){openOrderForm(product)}
 function closeOrderForm(){ $("quoteModal").classList.remove("open") }
-function sendOrderRequest(){const v=id=>$(id).value.trim();const name=v("qName"),phone=v("qPhone"),company=v("qCompany"),city=v("qCity"),project=v("qProject"),product=v("qProduct"),qty=v("qQty"),date=v("qDate"),notes=v("qNotes");if(!name||!phone||!city||!qty){alert("Lengkapi Nama, No. WhatsApp, Kota/Kabupaten Pengiriman, dan Perkiraan luas/jumlah.");return}const oid="GRC-"+new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);const msg=["GRC MATERIAL HUB","PERMINTAAN KONSULTASI / PENAWARAN / PEMESANAN","Nomor Referensi: "+oid,"","DATA PEMOHON","Nama: "+name,"Perusahaan/Instansi: "+(company||"-"),"No. WhatsApp: "+phone,"Kota/Kabupaten: "+city,"Jenis Proyek: "+(project||"-"),"","KEBUTUHAN","Produk/Material: "+product,"Perkiraan Luas/Jumlah: "+qty,"Perkiraan Waktu Kebutuhan: "+(date||"-"),"","CATATAN / KEBUTUHAN TEKNIS",notes||"-","","MOHON DIBANTU","- Rekomendasi material dan spesifikasi yang sesuai","- Ketersediaan dan estimasi pengadaan","- Harga/penawaran terbaik","- Estimasi pengiriman ke lokasi proyek","- Informasi teknis pemasangan bila diperlukan","","Terima kasih. Mohon konfirmasi dari tim GRC Material Hub.","GRC Material Hub"].join("\n");closeOrderForm();openWhatsApp(msg)}
+function openConsultationForm(){ $("consultationModal").classList.add("open"); $("cName").focus() }
+function closeConsultationForm(){ $("consultationModal").classList.remove("open") }
+function sendOrderRequest(){const v=id=>$(id).value.trim();const name=v("qName"),phone=v("qPhone"),company=v("qCompany"),city=v("qCity"),project=v("qProject"),product=v("qProduct"),qty=v("qQty"),date=v("qDate"),notes=v("qNotes");if(!name||!phone||!city||!qty){alert("Lengkapi Nama, No. WhatsApp, Kota/Kabupaten Pengiriman, dan Perkiraan luas/jumlah.");return}const oid="GRC-Q-"+new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);const msg=["GRC MATERIAL HUB","PERMINTAAN PENAWARAN PROYEK","Nomor Referensi: "+oid,"","DATA PEMOHON","Nama: "+name,"Perusahaan/Instansi: "+(company||"-"),"No. WhatsApp: "+phone,"Kota/Kabupaten Pengiriman: "+city,"Jenis Proyek: "+project,"","KEBUTUHAN KOMERSIAL","Produk/Material: "+product,"Perkiraan Luas/Jumlah: "+qty,"Target Pengiriman/Kebutuhan: "+(date||"-"),"","DETAIL KEBUTUHAN",notes||"-","","MOHON DIBANTU","- Harga dan penawaran resmi","- Ketersediaan / jumlah stok","- Minimum order bila ada","- Estimasi pengiriman ke lokasi proyek","- Syarat pembayaran dan proses pemesanan","","Terima kasih. Mohon konfirmasi dari tim GRC Material Hub.","GRC Material Hub"].join("\n");closeOrderForm();openWhatsApp(msg)}
+function sendConsultationRequest(){const v=id=>$(id).value.trim();const name=v("cName"),phone=v("cPhone"),city=v("cCity"),application=v("cApplication"),environment=v("cEnvironment"),area=v("cArea"),dimension=v("cDimension"),question=v("cQuestion");if(!name||!phone||!city||!question){alert("Lengkapi Nama, No. WhatsApp, Lokasi/Kota Proyek, dan Pertanyaan Teknis.");return}const oid="GRC-C-"+new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);const msg=["GRC MATERIAL HUB","PERMINTAAN KONSULTASI TEKNIS","Nomor Referensi: "+oid,"","DATA PEMOHON","Nama: "+name,"No. WhatsApp: "+phone,"Lokasi/Kota Proyek: "+city,"","KONTEKS TEKNIS","Aplikasi GRC: "+application,"Kondisi Penggunaan: "+environment,"Perkiraan Luas: "+(area||"-"),"Ukuran/Kondisi Bidang: "+(dimension||"-"),"","PERTANYAAN TEKNIS",question,"","MOHON DIBANTU","- Rekomendasi material / ketebalan yang sesuai","- Pertimbangan sistem rangka dan pemasangan","- Perhitungan kebutuhan awal bila datanya cukup","- Catatan datasheet atau hal yang perlu diverifikasi","","Terima kasih. Mohon arahan dari tim GRC Material Hub.","GRC Material Hub"].join("\n");closeConsultationForm();openWhatsApp(msg)}
 function askOrder(name){openOrderForm(name)}
 function calc(){const a=+($("area").value)||0,s=+($("sheet").value)||1,w=+($("waste").value)||0;const n=Math.ceil(a*(1+w/100)/s);$("calcResult").textContent="Perkiraan awal: "+n+" lembar · "+(a*(1+w/100)).toFixed(1)+" m² termasuk waste "+w+"%"}
 ["area","sheet","waste"].forEach(id=>$(id).addEventListener("input",calc));calc();
 function addMsg(text,me=false){const d=document.createElement("div");d.className="bubble"+(me?" me":"");d.textContent=text;$("chat").appendChild(d);$("chat").scrollTop=$("chat").scrollHeight}
 function quick(text){$("question").value=text;askAI()}
 function askAI(){const q=$("question").value.trim();if(!q)return;addMsg(q,true);$("question").value="";const loading=document.createElement("div");loading.className="bubble";loading.textContent="Menyiapkan panduan teknis…";$("chat").appendChild(loading);$("chat").scrollTop=$("chat").scrollHeight;setTimeout(()=>{const t=q.toLowerCase();let a="Sebutkan aplikasi, luas bidang, interior/eksterior, ukuran lembar bila diketahui dan kebutuhan pemasangan agar rekomendasi lebih tepat.";if(t.includes("plafon")||t.includes("ceiling"))a="Untuk plafon interior, mulai dari luas bidang dan kondisi rangka. Contoh katalog menempatkan GRC 4–5 mm sebagai pilihan awal; verifikasi datasheet produk, jarak rangka, pengikat, sambungan dan beban sebelum pemasangan.";else if(t.includes("eksterior")||t.includes("cladding"))a="Untuk eksterior/cladding, jangan menentukan ketebalan hanya dari angka mm. Periksa datasheet, sistem rangka, jarak pengikat, sambungan, sealant, paparan cuaca dan detail drainase.";else if(t.includes("hitung")||t.includes("lembar")||t.includes("luas")||t.includes("m²"))a="Gunakan kalkulator: luas bidang × (1 + waste), kemudian bagi luas satu lembar dan bulatkan ke atas. Tambahkan cadangan sesuai pola potongan dan kondisi lapangan.";else if(t.includes("pasang")||t.includes("sekrup")||t.includes("sambungan"))a="Periksa rangka, jarak pengikat, posisi sambungan, jointing, sealant dan finishing sesuai sistem produk. Jangan memakai satu ukuran sekrup atau jarak rangka untuk semua produk.";loading.textContent=a},350)}
-$("quoteModal").addEventListener("click",e=>{if(e.target.id==="quoteModal")closeOrderForm()});
+$("quoteModal").addEventListener("click",e=>{if(e.target.id==="quoteModal")closeOrderForm()});$("consultationModal").addEventListener("click",e=>{if(e.target.id==="consultationModal")closeConsultationForm()});
 </script>
 </body>
 </html>
