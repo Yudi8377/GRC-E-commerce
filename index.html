@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-  GRC Material Hub
+  MuriaArch — GRC Material & Technical Commerce
   UI direction adapted from Alpha by HTML5 UP.
   Alpha by HTML5 UP | html5up.net | CCA 3.0 license: html5up.net/license
 -->
@@ -8,8 +8,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<title>GRC MATERIAL HUB — GRC Board & Technical Commerce</title>
-<meta name="description" content="Katalog material GRC berdasarkan aplikasi, kalkulator kebutuhan, panduan pemasangan, AI Technical Companion dan pemesanan melalui WhatsApp.">
+<title>MuriaArch — Material GRC & Technical Commerce</title>
+<meta name="description" content="MuriaArch menyediakan referensi material GRC dan fiber-cement board, kalkulator kebutuhan, panduan teknis, konsultasi, dan permintaan penawaran melalui WhatsApp.">
 <link rel="canonical" href="https://yudi8377.github.io/GRC-E-commerce/">
 <meta name="theme-color" content="#e89980">
 <style>
@@ -72,7 +72,7 @@ label{display:block;color:#4f5653;font-size:.85em;font-weight:400;margin-bottom:
 <body class="landing">
 <div id="page-wrapper">
 <header id="header">
-  <h1><a class="brandMark" href="#top">GRC MATERIAL <span>HUB</span></a></h1>
+  <h1><a class="brandMark" href="#top">MURIA<span>ARCH</span></a></h1>
   <nav id="nav"><ul>
     <li><a href="#aplikasi">Aplikasi</a></li>
     <li><a href="#produk">Produk</a></li>
@@ -167,7 +167,7 @@ label{display:block;color:#4f5653;font-size:.85em;font-weight:400;margin-bottom:
   </section>
 
   <section class="box special">
-    <header class="sectionHead"><h2>Referensi Aplikasi Material</h2><p>Visual digunakan sebagai referensi konteks aplikasi GRC/fiber-cement board; bukan klaim proyek aktual GRC Material Hub.</p></header>
+    <header class="sectionHead"><h2>Referensi Aplikasi Material</h2><p>Visual digunakan sebagai referensi konteks aplikasi GRC/fiber-cement board; bukan klaim proyek aktual MuriaArch.</p></header>
     <div class="row">
       <div class="col-6"><article class="productCard"><div class="image featured"><img alt="Ilustrasi panel partition" src="https://www.easy.cl/_next/image?q=75&url=https%3A%2F%2Feasycl.vteximg.com.br%2Farquivos%2Fids%2F4804116%2F118530-0000-003.jpg%3Fv%3D638863542600470000&w=1080"></div><h3>Panel & Partition</h3><p>Contoh penggunaan panel pada rangka untuk kebutuhan partisi/interior.</p></article></div>
       <div class="col-6"><article class="productCard"><div class="image featured"><img alt="Ilustrasi exterior cladding" src="https://i.ibb.co/YF6StYHj/Interior-office-space-with-installed-GRC-partition-walls-in-natural-daylight-61.jpg"></div><h3>Exterior Cladding</h3><p>Contoh penggunaan panel untuk dinding dan pelapis eksterior.</p></article></div>
@@ -194,9 +194,9 @@ label{display:block;color:#4f5653;font-size:.85em;font-weight:400;margin-bottom:
 
 <footer id="footer">
   <div class="container">
-    <h3>GRC MATERIAL HUB</h3>
+    <h3>MURIAARCH</h3>
     <p>Website statis · GitHub Pages · tanpa hosting berbayar.</p>
-    <p class="copyright">Design base: Alpha by HTML5 UP, adapted for GRC Material Hub. HTML5 UP / CCA 3.0: html5up.net/license · © GRC Material Hub</p>
+    <p class="copyright">Design base: Alpha by HTML5 UP, adapted for MuriaArch. HTML5 UP / CCA 3.0: html5up.net/license · © MuriaArch</p>
   </div>
 </footer>
 </div>
@@ -251,8 +251,8 @@ function openQuoteForm(product=""){openOrderForm(product)}
 function closeOrderForm(){ $("quoteModal").classList.remove("open") }
 function openConsultationForm(){ $("consultationModal").classList.add("open"); $("cName").focus() }
 function closeConsultationForm(){ $("consultationModal").classList.remove("open") }
-function sendOrderRequest(){const v=id=>$(id).value.trim();const name=v("qName"),phone=v("qPhone"),company=v("qCompany"),city=v("qCity"),project=v("qProject"),product=v("qProduct"),qty=v("qQty"),date=v("qDate"),notes=v("qNotes");if(!name||!phone||!city||!qty){alert("Lengkapi Nama, No. WhatsApp, Kota/Kabupaten Pengiriman, dan Perkiraan luas/jumlah.");return}const oid="GRC-Q-"+new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);const msg=["GRC MATERIAL HUB","PERMINTAAN PENAWARAN PROYEK","Nomor Referensi: "+oid,"","DATA PEMOHON","Nama: "+name,"Perusahaan/Instansi: "+(company||"-"),"No. WhatsApp: "+phone,"Kota/Kabupaten Pengiriman: "+city,"Jenis Proyek: "+project,"","KEBUTUHAN KOMERSIAL","Produk/Material: "+product,"Perkiraan Luas/Jumlah: "+qty,"Target Pengiriman/Kebutuhan: "+(date||"-"),"","DETAIL KEBUTUHAN",notes||"-","","MOHON DIBANTU","- Harga dan penawaran resmi","- Ketersediaan / jumlah stok","- Minimum order bila ada","- Estimasi pengiriman ke lokasi proyek","- Syarat pembayaran dan proses pemesanan","","Terima kasih. Mohon konfirmasi dari tim GRC Material Hub.","GRC Material Hub"].join("\n");closeOrderForm();openWhatsApp(msg)}
-function sendConsultationRequest(){const v=id=>$(id).value.trim();const name=v("cName"),phone=v("cPhone"),city=v("cCity"),application=v("cApplication"),environment=v("cEnvironment"),area=v("cArea"),dimension=v("cDimension"),question=v("cQuestion");if(!name||!phone||!city||!question){alert("Lengkapi Nama, No. WhatsApp, Lokasi/Kota Proyek, dan Pertanyaan Teknis.");return}const oid="GRC-C-"+new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);const msg=["GRC MATERIAL HUB","PERMINTAAN KONSULTASI TEKNIS","Nomor Referensi: "+oid,"","DATA PEMOHON","Nama: "+name,"No. WhatsApp: "+phone,"Lokasi/Kota Proyek: "+city,"","KONTEKS TEKNIS","Aplikasi GRC: "+application,"Kondisi Penggunaan: "+environment,"Perkiraan Luas: "+(area||"-"),"Ukuran/Kondisi Bidang: "+(dimension||"-"),"","PERTANYAAN TEKNIS",question,"","MOHON DIBANTU","- Rekomendasi material / ketebalan yang sesuai","- Pertimbangan sistem rangka dan pemasangan","- Perhitungan kebutuhan awal bila datanya cukup","- Catatan datasheet atau hal yang perlu diverifikasi","","Terima kasih. Mohon arahan dari tim GRC Material Hub.","GRC Material Hub"].join("\n");closeConsultationForm();openWhatsApp(msg)}
+function sendOrderRequest(){const v=id=>$(id).value.trim();const name=v("qName"),phone=v("qPhone"),company=v("qCompany"),city=v("qCity"),project=v("qProject"),product=v("qProduct"),qty=v("qQty"),date=v("qDate"),notes=v("qNotes");if(!name||!phone||!city||!qty){alert("Lengkapi Nama, No. WhatsApp, Kota/Kabupaten Pengiriman, dan Perkiraan luas/jumlah.");return}const oid="GRC-Q-"+new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);const msg=["MURIAARCH","PERMINTAAN PENAWARAN PROYEK","Nomor Referensi: "+oid,"","DATA PEMOHON","Nama: "+name,"Perusahaan/Instansi: "+(company||"-"),"No. WhatsApp: "+phone,"Kota/Kabupaten Pengiriman: "+city,"Jenis Proyek: "+project,"","KEBUTUHAN KOMERSIAL","Produk/Material: "+product,"Perkiraan Luas/Jumlah: "+qty,"Target Pengiriman/Kebutuhan: "+(date||"-"),"","DETAIL KEBUTUHAN",notes||"-","","MOHON DIBANTU","- Harga dan penawaran resmi","- Ketersediaan / jumlah stok","- Minimum order bila ada","- Estimasi pengiriman ke lokasi proyek","- Syarat pembayaran dan proses pemesanan","","Terima kasih. Mohon konfirmasi dari tim MuriaArch.","MuriaArch"].join("\n");closeOrderForm();openWhatsApp(msg)}
+function sendConsultationRequest(){const v=id=>$(id).value.trim();const name=v("cName"),phone=v("cPhone"),city=v("cCity"),application=v("cApplication"),environment=v("cEnvironment"),area=v("cArea"),dimension=v("cDimension"),question=v("cQuestion");if(!name||!phone||!city||!question){alert("Lengkapi Nama, No. WhatsApp, Lokasi/Kota Proyek, dan Pertanyaan Teknis.");return}const oid="GRC-C-"+new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);const msg=["MURIAARCH","PERMINTAAN KONSULTASI TEKNIS","Nomor Referensi: "+oid,"","DATA PEMOHON","Nama: "+name,"No. WhatsApp: "+phone,"Lokasi/Kota Proyek: "+city,"","KONTEKS TEKNIS","Aplikasi GRC: "+application,"Kondisi Penggunaan: "+environment,"Perkiraan Luas: "+(area||"-"),"Ukuran/Kondisi Bidang: "+(dimension||"-"),"","PERTANYAAN TEKNIS",question,"","MOHON DIBANTU","- Rekomendasi material / ketebalan yang sesuai","- Pertimbangan sistem rangka dan pemasangan","- Perhitungan kebutuhan awal bila datanya cukup","- Catatan datasheet atau hal yang perlu diverifikasi","","Terima kasih. Mohon arahan dari tim MuriaArch.","MuriaArch"].join("\n");closeConsultationForm();openWhatsApp(msg)}
 function askOrder(name){openConsultationForm()}
 function calc(){const a=+($("area").value)||0,s=+($("sheet").value)||1,w=+($("waste").value)||0;const n=Math.ceil(a*(1+w/100)/s);$("calcResult").textContent="Perkiraan awal: "+n+" lembar · "+(a*(1+w/100)).toFixed(1)+" m² termasuk waste "+w+"%"}
 ["area","sheet","waste"].forEach(id=>$(id).addEventListener("input",calc));calc();
