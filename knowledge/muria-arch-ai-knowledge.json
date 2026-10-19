@@ -1,0 +1,195 @@
+{
+  "name": "Muria-Arch AI Companion",
+  "version": "1.0.0",
+  "language": "id-ID",
+  "mode": "embedded-rule-based",
+  "description": "Pengetahuan awal tertanam untuk konsultasi pekerjaan GRC dan arsitektur eksterior. Bukan pengganti perhitungan teknis, inspeksi lapangan, atau penawaran resmi.",
+  "knowledge": [
+    {
+      "topic": "kerawangan_custom",
+      "keywords": [
+        "kerawangan",
+        "krawangan",
+        "motif",
+        "pola custom",
+        "pola krawangan"
+      ],
+      "answer": "Bisa dibahas sebagai kebutuhan custom. Siapkan ukuran bidang dan panel, gambar atau foto pola referensi, fungsi panel (fasad, ventilasi, secondary skin atau dekorasi), lokasi proyek, jumlah/luas perkiraan, finishing, serta apakah pemasangan diperlukan. Kelayakan motif, ketebalan, titik tumpu dan sistem pemasangan perlu ditinjau berdasarkan desain serta kondisi proyek."
+    },
+    {
+      "topic": "informasi_penawaran",
+      "keywords": [
+        "penawaran",
+        "quotation",
+        "apa yang dibutuhkan",
+        "data proyek",
+        "harga penawaran"
+      ],
+      "answer": "Untuk menyiapkan permintaan penawaran, berikan jenis pekerjaan, lokasi proyek, ukuran atau volume, gambar kerja/referensi, material atau finishing yang diinginkan, cakupan (produksi saja atau termasuk pengiriman dan pemasangan), target waktu, serta akses lokasi bila relevan. Jika belum lengkap, mulai dari jenis pekerjaan, kota/kabupaten, ukuran perkiraan dan foto referensi."
+    },
+    {
+      "topic": "harga",
+      "keywords": [
+        "harga",
+        "biaya",
+        "berapa",
+        "tarif",
+        "per meter",
+        "estimasi harga"
+      ],
+      "answer": "Harga resmi Muria-Arch belum tersedia sebagai data yang dapat saya pastikan secara otomatis. Biaya dapat bergantung pada jenis produk, dimensi/volume, kompleksitas motif dan cetakan, spesifikasi material, finishing, jumlah unit, pengiriman, kondisi lokasi, serta pemasangan. Saya tidak akan menebak harga; saya bisa membantu mengumpulkan detail agar tim dapat meninjau permintaan Anda."
+    },
+    {
+      "topic": "material_grc",
+      "keywords": [
+        "apa itu grc",
+        "grc",
+        "gfrc",
+        "glass fiber",
+        "serat kaca"
+      ],
+      "answer": "GRC/GFRC adalah beton yang diperkuat serat kaca tahan alkali (AR glass fibre). Campuran dan metode produksi bervariasi. Serat membantu kinerja tarik/lentur pada elemen relatif tipis, tetapi hasil akhir tetap bergantung pada desain campuran, proses produksi, curing, detail panel dan kontrol mutu. Data kekuatan suatu produk tidak boleh diasumsikan sama untuk produk lain."
+    },
+    {
+      "topic": "proses_proyek",
+      "keywords": [
+        "proses",
+        "tahapan",
+        "cara pesan",
+        "alur proyek",
+        "pemesanan"
+      ],
+      "answer": "Alur awal yang disarankan: (1) jelaskan kebutuhan dan lokasi; (2) kirim ukuran, gambar atau foto referensi; (3) bahas jenis material, finishing, sambungan, dukungan/rangka dan apakah pemasangan termasuk; (4) tim meninjau kelayakan dan ruang lingkup; (5) harga, jadwal, pengiriman serta ketentuan dikonfirmasi melalui penawaran resmi."
+    },
+    {
+      "topic": "pemasangan",
+      "keywords": [
+        "pemasangan",
+        "rangka",
+        "anchor",
+        "angkur",
+        "sambungan",
+        "fasad"
+      ],
+      "answer": "Pemasangan panel eksterior perlu mempertimbangkan berat dan ukuran panel, kondisi substruktur, titik angkur, sambungan, toleransi gerak, paparan cuaca, drainase dan akses kerja. Detail pengikat dan rangka tidak boleh ditentukan hanya dari foto atau perkiraan chat. Untuk panel besar/tinggi atau kondisi berisiko, diperlukan gambar kerja dan tinjauan tenaga teknis yang kompeten."
+    },
+    {
+      "topic": "finishing",
+      "keywords": [
+        "finishing",
+        "cat",
+        "warna",
+        "tekstur",
+        "coating"
+      ],
+      "answer": "Finishing perlu ditentukan dari tampilan yang diinginkan, paparan cuaca, kompatibilitas sistem pelapis dengan substrat, persiapan permukaan dan detail sambungan. Sebutkan warna/tekstur referensi dan apakah sampel atau mock-up diperlukan. Produk finishing dan garansi harus dikonfirmasi oleh tim berdasarkan spesifikasi aktual."
+    },
+    {
+      "topic": "kubah",
+      "keywords": [
+        "kubah",
+        "dome",
+        "elemen atap"
+      ],
+      "answer": "Untuk pembahasan kubah, siapkan diameter/lebar, tinggi atau profil, gambar tampak/potongan bila ada, lokasi dan ketinggian bangunan, kebutuhan rangka/struktur pendukung, finishing, akses pemasangan serta target waktu. Berat, struktur, pengangkatan dan sambungan harus diverifikasi secara teknis sebelum diputuskan."
+    },
+    {
+      "topic": "lisplang_profil",
+      "keywords": [
+        "lisplang",
+        "profil",
+        "cornice",
+        "listplank"
+      ],
+      "answer": "Untuk lisplang dan profil eksterior, siapkan panjang total, ukuran penampang/profil, detail sudut dan sambungan, foto kondisi atap/fasad, ketinggian pemasangan, finishing dan kebutuhan pemasangan. Ukuran akhir serta cara pengikatan perlu disesuaikan dengan kondisi bangunan."
+    },
+    {
+      "topic": "perawatan",
+      "keywords": [
+        "perawatan",
+        "retak",
+        "noda",
+        "efloresensi",
+        "maintenance"
+      ],
+      "answer": "Pemeriksaan visual berkala dapat membantu mendeteksi retak, noda putih/efloresensi, kerusakan lapisan cat, sambungan terbuka, korosi pengikat atau rembesan. Penyebab harus ditelusuri sebelum perbaikan; jangan menutup retak atau mengganti angkur tanpa pemeriksaan yang sesuai."
+    },
+    {
+      "topic": "dokumen",
+      "keywords": [
+        "dokumen",
+        "gambar kerja",
+        "shop drawing",
+        "spesifikasi",
+        "sampel"
+      ],
+      "answer": "Dokumen yang membantu antara lain gambar elevasi dan potongan, ukuran panel, pola, spesifikasi dan finishing, detail sambungan/angkur, urutan pemasangan, sampel warna/tekstur, volume, serta batas pekerjaan. Kebutuhan dokumen berbeda sesuai skala dan risiko proyek."
+    },
+    {
+      "topic": "pemasangan_termasuk",
+      "keywords": [
+        "termasuk pasang",
+        "jasa pasang",
+        "pasang saja",
+        "produksi saja",
+        "pengiriman"
+      ],
+      "answer": "Cakupan harus dinyatakan jelas: produksi saja, produksi dan pengiriman, atau termasuk rangka, pemasangan, akses kerja, sealant/finishing, serta pekerjaan perbaikan. Saya tidak bisa memastikan cakupan layanan untuk proyek tertentu sampai tim Muria-Arch mengonfirmasinya."
+    },
+    {
+      "topic": "kontak",
+      "keywords": [
+        "whatsapp",
+        "hubungi",
+        "kontak",
+        "konsultasi"
+      ],
+      "answer": "Saya dapat menyiapkan ringkasan kebutuhan Anda untuk diteruskan ke WhatsApp Muria-Arch. Pastikan detail dan nomor kontak yang tampil di website benar sebelum mengirimkan data proyek."
+    }
+  ],
+  "intake_fields": [
+    "Nama (opsional untuk konsultasi awal)",
+    "Jenis pekerjaan",
+    "Lokasi proyek (kota/kabupaten)",
+    "Ukuran/volume",
+    "Motif/gambar referensi",
+    "Material dan finishing",
+    "Produksi saja atau termasuk pengiriman/pemasangan",
+    "Target waktu",
+    "Catatan kondisi lokasi"
+  ],
+  "guardrails": [
+    "Jangan mengarang harga, stok, jadwal, garansi, sertifikasi, kemampuan produksi, atau layanan yang belum dikonfirmasi.",
+    "Jangan menyetujui desain struktural, ketebalan, bentang, angkur, rangka, beban angin/gempa atau metode pengangkatan berdasarkan chat saja.",
+    "Bedakan panduan teknis umum dari spesifikasi Muria-Arch yang telah disahkan.",
+    "Minta tinjauan insinyur/tenaga kompeten untuk keselamatan struktur, panel besar/tinggi, sambungan, atau risiko jatuh.",
+    "Jangan meminta data sensitif yang tidak diperlukan.",
+    "Sumber eksternal adalah literatur umum, bukan bukti bahwa Muria-Arch telah menerapkan standar tertentu."
+  ],
+  "sources": [
+    {
+      "title": "GRCA Technical Publications — Specification, testing, practical design and fixing guides",
+      "url": "https://www.grca.online/technical/grca-publications"
+    },
+    {
+      "title": "GRCA Technical FAQs — definition of GRC/GFRC and alkali-resistant glass fibres",
+      "url": "https://www.grca.online/technical/faq-s"
+    },
+    {
+      "title": "GRCA Technical Notes — production, standards/testing, admixtures and 3D detailing",
+      "url": "https://www.grca.online/technical/tech-notes"
+    },
+    {
+      "title": "Precast/Prestressed Concrete Institute — MNL-128 Recommended Practice for GFRC Panels",
+      "url": "https://www.pci.org/PCI/PCI/Bookstore/Item_Detail.aspx?Category=FREE&iProductCode=MNL-128-01"
+    },
+    {
+      "title": "PCI — ANSI/PCI 128-24 Specification for GFRC Panels",
+      "url": "https://www.pci.org/ItemDetail?Category=FIELD&WebsiteKey=ef4e99b1-7f36-4c04-973a-859254af3794&iProductCode=ANSI%2FPCI+128-24"
+    },
+    {
+      "title": "Amanah Solution — overview of krawangan GRC project planning (commercial source; treat as secondary reading)",
+      "url": "https://www.amanahsolution.com/fasad/proyek-krawangan-grc"
+    }
+  ]
+}
