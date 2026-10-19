@@ -1,265 +1,103 @@
-<!DOCTYPE HTML>
-<!--
-  MuriaArch — GRC Material & Technical Commerce
-  UI direction adapted from Alpha by HTML5 UP.
-  Alpha by HTML5 UP | html5up.net | CCA 3.0 license: html5up.net/license
--->
+<!doctype html>
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<title>MuriaArch — Material GRC & Technical Commerce</title>
-<meta name="description" content="MuriaArch menyediakan referensi material GRC dan fiber-cement board, kalkulator kebutuhan, panduan teknis, konsultasi, dan permintaan penawaran melalui WhatsApp.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MuriaArch — Kerawangan Masjid, Kubah, Lisplang & Ornamen Eksterior</title>
+<meta name="description" content="MuriaArch berfokus pada elemen eksterior arsitektur: kerawangan masjid, kubah, lisplang, ornamen fasad, dan panel dekoratif. Konsultasikan kebutuhan proyek Anda.">
+<meta name="theme-color" content="#183c32">
 <link rel="canonical" href="https://yudi8377.github.io/GRC-E-commerce/">
-<meta name="theme-color" content="#e89980">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Original MuriaArch implementation. UX reference: Start Bootstrap Business Frontpage (MIT), https://github.com/StartBootstrap/startbootstrap-business-frontpage. Any third-party imagery remains subject to its source license; images here are illustrative references, not claimed MuriaArch projects. -->
 <style>
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
-html,body,div,span,h1,h2,h3,h4,h5,h6,p,a,article,aside,footer,header,main,nav,section,form,label,input,select,textarea,button,ul,li{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}
-article,aside,footer,header,main,nav,section{display:block}
-html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
-body{background:#f5f5f5;color:#5f6461;font-family:"Source Sans Pro",sans-serif;font-size:16pt;font-weight:300;line-height:1.65em;letter-spacing:-.015em;min-width:320px}
-body:before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(41,70,61,.10),rgba(255,255,255,0) 32%),radial-gradient(circle at 10% 15%,rgba(184,117,93,.08),transparent 30%);pointer-events:none;z-index:-1}
-a{color:#e89980;text-decoration:none;border-bottom:1px dotted #e89980;transition:.2s}
-a:hover{border-bottom-color:transparent}
-strong,b{color:#505653;font-weight:400}
-ul{list-style:none}
-h1,h2,h3,h4{color:#4f5653;font-weight:300;line-height:1em;margin:0 0 .5em}
-h1{font-size:3.4em;letter-spacing:-.045em}
-h2{font-size:2.25em;line-height:1.5em;letter-spacing:-.035em}
-h3{font-size:1.5em;line-height:1.5em;letter-spacing:-.025em}
-p{margin:0 0 2em}
-.container{width:70em;max-width:calc(100% - 2em);margin:0 auto}
-.row{display:flex;flex-wrap:wrap;margin:-1.5em 0 0 -1.5em}.row>*{padding:1.5em 0 0 1.5em;width:100%}.col-6{width:50%}
-.box{background:linear-gradient(145deg,#ffffff,#f8f8f8);border-radius:10px;box-shadow:0 10px 35px rgba(42,58,51,.08),0 2px 0 0 rgba(0,0,0,.035);padding:3em}.box.special{padding:2.5em 2.5em 2em}
-.image{display:block;position:relative;border:0}.image img{display:block;width:100%;height:100%;min-height:230px;object-fit:cover;border-radius:8px;filter:saturate(.86) contrast(.96);transition:transform .35s ease}.image:hover img{transform:scale(1.015)}.image.featured{margin:0 0 2em}.image.featured img{border-radius:6px 6px 0 0}
-.button,button,input[type=submit]{appearance:none;display:inline-block;border-radius:6px;border:1px solid #e5e5e5;background:#fff;color:#646464;cursor:pointer;font-size:.8em;font-weight:400;height:3.1em;line-height:3em;padding:0 1.8em;text-align:center;text-decoration:none;transition:.2s}
-.button:hover,button:hover,input[type=submit]:hover{border-color:#e89980;color:#e89980}
-.button.primary,input[type=submit].primary{background:linear-gradient(135deg,#e89980,#9f624f);border-color:#9f624f;color:#fff;box-shadow:none}
-.button.primary:hover,input[type=submit].primary:hover{background:#c48a73;border-color:#c48a73}
-.actions{display:flex;justify-content:center;gap:1em;flex-wrap:wrap}.actions.special{justify-content:center}
-.actions li{list-style:none}
-input,select,textarea{appearance:none;background:#fff;border:1px solid #e5e5e5;border-radius:6px;color:#505653;font:inherit;padding:.65em;width:100%;outline:none}
-input:focus,select:focus,textarea:focus{border-color:#e89980}
-label{display:block;color:#4f5653;font-size:.85em;font-weight:400;margin-bottom:.5em}
-.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:1em}.full{grid-column:1/-1}
-#page-wrapper{padding-top:4.5em}
-#header{background:rgba(255,255,255,.94);box-shadow:0 1px 0 rgba(42,58,51,.12);height:4.5em;left:0;line-height:4.5em;position:fixed;top:0;width:100%;z-index:20;backdrop-filter:blur(10px)}
-#header h1{color:#4f5653;font-size:1em;font-weight:400;left:1.5em;line-height:inherit;margin:0;position:absolute;top:0}.brandMark{color:#4f5653;border:0}.brandMark span{background:#e89980;color:#fff;border-radius:4px;padding:.12em .4em;margin-left:.2em}
-#nav{position:absolute;right:1.5em;top:0}#nav ul{margin:0}#nav>ul>li{display:inline-block;margin-left:1.5em;position:relative}#nav a{border:0;color:#4f5653;display:inline-block;font-size:.75em;font-weight:400}#nav a:hover{color:#e89980}.navBtn{height:2.6em;line-height:2.4em;padding:0 1em}
-#banner{background:linear-gradient(120deg,rgba(232,153,128,.92),rgba(232,153,128,.76) 52%,rgba(127,205,184,.62)),url("https://www.grcboard.com/img/product/SERI%20PAPAN/Product.webp");background-size:cover;background-position:center;color:#fff;padding:9em 2em 8em;text-align:center}
-#banner h2{color:#fff;font-size:3.5em;margin-bottom:.25em}.bannerLead{color:#fff9;max-width:48em;margin:0 auto 2em}.bannerMeta{color:#fff9;font-size:.72em;letter-spacing:.08em;text-transform:uppercase}
-#main{padding:4em 0 3em}.major{text-align:center}.major h2{color:#4f5653}.major p{max-width:48em;margin-left:auto;margin-right:auto}
-.features{padding:0!important;overflow:hidden}.features-row{display:flex;border-bottom:1px solid #e5e5e5}.features-row:last-child{border-bottom:0}.features-row section{padding:2.5em;text-align:center;width:50%}.features-row section+section{border-left:1px solid #e5e5e5}
-.icon{font-size:2em;color:#fff;background:#e89980;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:2.3em;height:2.3em;margin-bottom:.5em}.icon.alt{background:#7fcdb8}.icon.green{background:#90b0ba}.icon.gold{background:#e5cb95}
-.productCard{height:100%;display:flex;flex-direction:column}.productCard .cardBody{padding:0 1.5em 1.5em}.productCard .cardBody p{min-height:3.4em}.tag{display:inline-block;background:#eeeeee;border-radius:999px;color:#505653;font-size:.68em;padding:.2em .7em;margin:.2em}
-.productActions{margin-top:auto;display:flex;gap:.5em;flex-wrap:wrap}.productActions .button{font-size:.72em}
-.priceMissing{font-size:.72em;color:#a0786c;margin-top:.5em}
-.sectionHead{text-align:center;margin-bottom:2em}.sectionHead p{max-width:48em;margin:0 auto}
-.toolBox{margin-bottom:2em}.darkPanel{background:linear-gradient(135deg,#595959,#737373 68%,#7fcdb8);color:#fff}.darkPanel h2,.darkPanel h3{color:#fff}.darkPanel p{color:#f5f5f5}
-.result{background:#e89980;color:#fff;border-radius:6px;padding:.8em 1em;margin-top:1em;font-weight:400}
-.aiChat{height:15em;overflow:auto;background:#f7f6f1;border:1px solid #e5e5e5;border-radius:6px;padding:1em;margin:1em 0}.bubble{background:#fff;border:1px solid #e2e2e2;border-radius:6px;padding:.7em .9em;margin-bottom:.6em;font-size:.85em}.bubble.me{background:#595959;color:#fff;margin-left:12%;border-color:#595959}
-.quick{display:flex;gap:.5em;flex-wrap:wrap;margin:1em 0}.quick button{font-size:.68em;height:2.7em;line-height:2.5em;padding:0 1em}
-.ask{display:flex;gap:.5em}.ask input{flex:1}
-.projectNote{font-size:.75em;color:#738079;text-align:center;margin-top:1em}
-.contactPanel{background:#595959;color:#fff}.contactPanel h2,.contactPanel h3{color:#fff}.contactGrid{display:grid;grid-template-columns:1.1fr 1fr;gap:2em}.contactItem{border:1px solid #ffffff25;border-radius:6px;padding:1em;margin-bottom:.7em}.contactItem span{display:block;color:#b1bbb5;font-size:.68em;text-transform:uppercase;letter-spacing:.08em}.contactItem b{display:block;color:#fff}
-#cta{background:linear-gradient(120deg,#595959,#737373 58%,#e89980);color:#fff;padding:4em 2em;text-align:center}#cta h2,#cta p{color:#fff}#cta h2{font-size:2em}#cta .button{background:#fff;color:#646464;border-color:#fff}
-#footer{background:#333;color:#bbb;padding:4em 0 3em;text-align:center}#footer h3,#footer b{color:#fff}#footer p{font-size:.75em}.copyright{font-size:.68em;color:#777777;margin-top:2em}.copyright a{color:#b1bbb5}
-.modal{position:fixed;inset:0;background:#0009;display:none;align-items:center;justify-content:center;padding:1em;z-index:50}.modal.open{display:flex}.modalCard{width:min(900px,100%);max-height:90vh;overflow:auto;background:#f5f5f5;border-radius:6px;box-shadow:0 1em 4em #0006}.modalHead{display:flex;justify-content:space-between;align-items:center;padding:1.2em 1.5em;border-bottom:1px solid #e5e5e5}.modalHead h3{margin:0}.quoteForm{padding:1.5em}.quoteActions{display:flex;justify-content:flex-end;gap:.7em;padding:0 1.5em 1.5em}
-@media(max-width:900px){body{font-size:14pt}.container{max-width:calc(100% - 2em)}#nav>ul>li:not(:last-child){display:none}#header h1{left:1em}#nav{right:1em}.col-6{width:100%}.contactGrid{grid-template-columns:1fr}.features-row{display:block}.features-row section{width:100%}.features-row section+section{border-left:0;border-top:1px solid #e5e5e5}}
-@media(max-width:600px){h1{font-size:2.5em}h2{font-size:1.8em}.container{max-width:calc(100% - 1em)}.box{padding:1.5em}.box.special{padding:1.5em 1.2em 1.2em}#page-wrapper{padding-top:4em}#header{height:4em;line-height:4em}#banner{padding:6em 1em 5em}#banner h2{font-size:2.5em}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.contactGrid{grid-template-columns:1fr}.ask{display:grid;grid-template-columns:1fr}.actions .button{width:100%}}
+:root{--forest:#183c32;--forest2:#245747;--gold:#c79b54;--gold-light:#e5cf9f;--ink:#202923;--muted:#69736d;--paper:#f7f6f0;--white:#fff;--line:#e4e6de;--shadow:0 18px 50px rgba(24,60,50,.11);--radius:20px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;color:var(--ink);background:var(--paper);font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.65}h1,h2,h3,h4{font-family:Manrope,sans-serif;line-height:1.15;letter-spacing:-.035em;margin:0 0 16px}h1{font-size:clamp(2.65rem,6vw,5.3rem);font-weight:800}h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:800}h3{font-size:1.25rem;font-weight:800}p{margin:0 0 16px;color:var(--muted)}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a,input,select,textarea{outline-offset:4px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold)}.container{width:min(1160px,calc(100% - 40px));margin:auto}.topbar{background:#102d25;color:#e7ece5;font-size:.83rem}.topbar .container{display:flex;justify-content:space-between;gap:14px;padding:9px 0}.topbar span:last-child{color:#d9c18e}.nav-wrap{position:sticky;top:0;z-index:20;background:rgba(247,246,240,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(24,60,50,.1)}nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-family:Manrope,sans-serif;font-size:1.2rem;font-weight:800;letter-spacing:-.04em;color:var(--forest)}.brand-mark{display:grid;place-items:center;width:42px;height:42px;background:var(--forest);color:var(--gold-light);border-radius:12px;font-family:Manrope;font-size:1rem;letter-spacing:-.08em}.brand small{display:block;font:600 .65rem "DM Sans",sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:-3px}.navlinks{display:flex;align-items:center;gap:27px;font-size:.92rem;font-weight:600}.navlinks a:not(.btn):hover{color:var(--forest2)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border:1px solid transparent;border-radius:8px;font-weight:700;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--forest);color:#fff}.btn-primary:hover{background:var(--forest2)}.btn-gold{background:var(--gold);color:#192a21}.btn-outline{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}.btn-light{background:#fff;color:var(--forest);border-color:var(--line)}.menu-toggle{display:none;border:0;background:none;color:var(--forest);font-size:1.6rem}.hero{background:var(--forest);color:#fff;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,39,31,.96) 0%,rgba(13,39,31,.86) 45%,rgba(13,39,31,.12) 100%);pointer-events:none}.hero-photo{position:absolute;inset:0 0 0 34%;background-image:url("https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=2000&q=85");background-position:center;background-size:cover;opacity:.86}.hero-inner{position:relative;z-index:1;min-height:610px;display:flex;align-items:center;padding:84px 0}.hero-copy{max-width:740px}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-light);margin-bottom:22px}.eyebrow:before{content:"";width:30px;height:2px;background:var(--gold)}.hero h1{max-width:760px}.hero h1 em{font-style:normal;color:var(--gold-light)}.hero-copy>p{color:#d3ded6;font-size:1.1rem;max-width:620px;margin:22px 0 30px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero-note{margin-top:32px;display:flex;gap:22px;flex-wrap:wrap;color:#d9e0da;font-size:.85rem}.hero-note span{display:flex;align-items:center;gap:8px}.hero-note b{color:var(--gold-light)}.trust-strip{background:#fff;border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}.trust-item{padding:23px 18px;border-right:1px solid var(--line);display:flex;align-items:center;gap:13px}.trust-item:first-child{padding-left:0}.trust-item:last-child{border:0}.trust-icon{width:43px;height:43px;flex:none;display:grid;place-items:center;border-radius:12px;background:#f1eee3;color:var(--forest);font-size:1.25rem}.trust-item strong{display:block;font-size:.9rem}.trust-item small{display:block;color:var(--muted);font-size:.78rem}.section{padding:94px 0}.section-head{max-width:720px;margin-bottom:42px}.section-head.center{text-align:center;margin-left:auto;margin-right:auto}.section-head.center .eyebrow{justify-content:center}.section-head p{font-size:1.04rem}.section-head .eyebrow{color:var(--forest2)}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .25s,box-shadow .25s}.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.service-image{height:210px;position:relative;overflow:hidden;background:#dfe4dc}.service-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.service-card:hover .service-image img{transform:scale(1.04)}.service-image:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(14,35,28,.45))}.service-number{position:absolute;z-index:1;top:15px;left:15px;background:rgba(255,255,255,.94);border-radius:7px;padding:6px 10px;font-size:.72rem;font-weight:800;color:var(--forest)}.service-content{padding:24px}.service-content p{font-size:.92rem;min-height:72px}.text-link{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:800;color:var(--forest)}.text-link:hover{color:#9b7130}.about{background:#eaece4}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about-visual{position:relative;min-height:500px}.about-main{position:absolute;inset:0 50px 55px 0;border-radius:var(--radius);overflow:hidden;background:#d8ddd3}.about-main img{width:100%;height:100%;object-fit:cover}.about-card{position:absolute;right:0;bottom:0;background:var(--gold-light);padding:24px;width:min(270px,75%);border-radius:14px;box-shadow:var(--shadow)}.about-card strong{display:block;font:800 1.15rem Manrope;margin-bottom:5px}.about-card p{font-size:.85rem;color:#514a3c;margin:0}.check-list{list-style:none;padding:0;margin:25px 0 30px;display:grid;gap:13px}.check-list li{display:flex;gap:12px;align-items:flex-start;color:#38453e}.check{width:23px;height:23px;flex:none;border-radius:50%;display:grid;place-items:center;background:#d9e6d9;color:var(--forest);font-size:.8rem;font-weight:900;margin-top:2px}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.process-card{padding:26px 22px;border-top:3px solid var(--gold);background:#fff;border-radius:0 0 14px 14px}.process-card .step{font:800 2rem Manrope;color:#c9d2c8;margin-bottom:20px}.process-card p{font-size:.9rem;margin:0}.gallery{background:#fff}.gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:220px 220px;gap:14px}.gallery-item{position:relative;overflow:hidden;border-radius:14px;background:#dce2dc}.gallery-item:first-child{grid-row:span 2}.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.gallery-item:hover img{transform:scale(1.05)}.gallery-label{position:absolute;inset:auto 0 0;padding:35px 18px 16px;color:#fff;background:linear-gradient(transparent,rgba(10,28,21,.8));font-weight:700}.gallery-caption{font-size:.82rem;color:var(--muted);margin-top:17px}.cta-band{background:var(--forest);color:#fff;padding:62px 0}.cta-flex{display:flex;justify-content:space-between;align-items:center;gap:30px}.cta-band h2{font-size:clamp(1.8rem,3vw,2.6rem);max-width:650px;margin-bottom:12px}.cta-band p{color:#d3ded6;margin:0}.cta-actions{display:flex;gap:12px;flex-wrap:wrap;flex:none}.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.faq-list details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:12px}.faq-list summary{font-weight:800;cursor:pointer}.faq-list details p{margin:12px 0 0;font-size:.92rem}.contact{background:#eceee8}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}.contact-panel{background:var(--forest);color:#fff;border-radius:var(--radius);padding:30px}.contact-panel p{color:#d1ddd5}.contact-row{display:flex;gap:13px;margin-top:24px;align-items:flex-start}.contact-row b{display:block}.contact-row small{color:#d1ddd5}.form-card{background:#fff;padding:30px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(20,50,40,.06)}.form-card h3{font-size:1.5rem}.form-card>p{font-size:.9rem}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;font-weight:800;color:#35463c}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid #d8ded6;border-radius:8px;background:#fbfcf9;color:var(--ink)}.field textarea{min-height:110px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--forest)}.form-note{font-size:.78rem;color:var(--muted);margin:13px 0 18px}.form-status{font-size:.86rem;margin-top:12px;color:var(--forest);min-height:1.2em}.footer{background:#102d25;color:#fff;padding:48px 0 24px}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:35px;padding-bottom:35px}.footer p,.footer a{color:#c6d3cb;font-size:.9rem}.footer h3{color:#fff;font-size:1rem}.footer-links{display:grid;gap:8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.16);padding-top:20px;display:flex;justify-content:space-between;gap:18px;color:#9eb2a5;font-size:.78rem}.wa-float{position:fixed;right:20px;bottom:20px;z-index:15;box-shadow:0 8px 25px rgba(0,0,0,.18);border-radius:50px;background:#1b7650;color:#fff;padding:13px 18px;font-weight:800}.wa-float:hover{background:#145e3e}.mobile-only{display:none}
+@media(max-width:900px){.navlinks{gap:15px}.navlinks>a:not(.btn){display:none}.hero-inner{min-height:560px}.hero-photo{left:15%}.trust-grid{grid-template-columns:repeat(2,1fr)}.trust-item:nth-child(2){border-right:0}.trust-item:nth-child(3){padding-left:0}.services{grid-template-columns:repeat(2,1fr)}.about-grid{gap:35px}.process-grid{grid-template-columns:repeat(2,1fr)}.faq-grid,.contact-grid{gap:30px}.gallery-grid{grid-template-rows:190px 190px}}
+@media(max-width:640px){.container{width:min(100% - 28px,1160px)}.topbar .container{font-size:.72rem}.topbar span:last-child{display:none}nav{min-height:68px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:15px 20px 22px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:var(--shadow);align-items:stretch;gap:0;flex-direction:column}.navlinks.open{display:flex}.navlinks a:not(.btn){display:block;padding:11px 0}.navlinks .btn{margin-top:10px}.hero:after{background:linear-gradient(90deg,rgba(13,39,31,.94),rgba(13,39,31,.68))}.hero-photo{left:0;opacity:.55}.hero-inner{min-height:590px;padding:65px 0}.hero-copy>p{font-size:1rem}.hero-actions .btn{width:100%}.trust-grid{grid-template-columns:1fr 1fr}.trust-item{padding:16px 8px;gap:9px}.trust-item:first-child,.trust-item:nth-child(3){padding-left:0}.trust-icon{width:36px;height:36px}.trust-item strong{font-size:.78rem}.trust-item small{font-size:.7rem}.section{padding:68px 0}.services{grid-template-columns:1fr}.service-image{height:220px}.service-content p{min-height:0}.about-grid,.faq-grid,.contact-grid{grid-template-columns:1fr}.about-visual{min-height:370px;order:2}.about-main{inset:0 30px 40px 0}.about-card{padding:18px}.process-grid{grid-template-columns:1fr 1fr;gap:12px}.process-card{padding:20px 16px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:230px 150px 150px}.gallery-item:first-child{grid-row:span 2}.gallery-item:last-child{grid-column:1/-1}.cta-flex{align-items:flex-start;flex-direction:column}.cta-actions{width:100%}.cta-actions .btn{flex:1}.form-card,.contact-panel{padding:22px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-grid{grid-template-columns:1fr;gap:22px}.footer-bottom{flex-direction:column}.wa-float{right:12px;bottom:12px;padding:11px 14px;font-size:.85rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style>
 </head>
-<body class="landing">
-<div id="page-wrapper">
-<header id="header">
-  <h1><a class="brandMark" href="#top">MURIA<span>ARCH</span></a></h1>
-  <nav id="nav"><ul>
-    <li><a href="#aplikasi">Aplikasi</a></li>
-    <li><a href="#produk">Produk</a></li>
-    <li><a href="#hitung">Kalkulator</a></li>
-    <li><a href="#ai">AI</a></li>
-    <li><a href="#kontak">Kontak</a></li>
-    <li><a class="button navBtn primary" href="#produk">Belanja</a></li>
-  </ul></nav>
-</header>
-
-<section id="banner">
-  <div class="bannerMeta">GRC BOARD · MATERIAL · TECHNICAL COMMERCE</div>
-  <h2>Material yang tepat untuk pekerjaan yang tepat.</h2>
-  <p class="bannerLead">Katalog GRC berdasarkan aplikasi bangunan, kalkulator kebutuhan, panduan teknis dan jalur pemesanan langsung melalui WhatsApp.</p>
-  <ul class="actions special">
-    <li><a class="button primary" href="#produk">Jelajahi Produk</a></li>
-    <li><a class="button" href="#ai">Tanya Technical Companion</a></li>
-  </ul>
-</section>
-
-<section id="main" class="container">
-  <section class="box special">
-    <header class="major">
-      <h2>Belanja bukan sekadar memilih ketebalan.</h2>
-      <p>Pilih aplikasi terlebih dahulu, cocokkan material, hitung kebutuhan awal, lalu minta penawaran berdasarkan data proyek. Harga dan stok tetap ditandai belum terhubung sampai sumber resmi tersedia.</p>
-    </header>
-    <div class="image featured">
-      <img alt="Papan GRC untuk aplikasi bangunan" src="https://i.ibb.co/YF6StYHj/Interior-office-space-with-installed-GRC-partition-walls-in-natural-daylight-61.jpg">
-    </div>
-  </section>
-
-  <section id="aplikasi" class="box special features">
-    <div class="features-row">
-      <section><span class="icon">01</span><h3>Ceiling</h3><p>Plafon dan area interior. Mulai dari luas bidang dan kondisi rangka.</p><a href="#produk">Lihat material →</a></section>
-      <section><span class="icon alt">02</span><h3>Lisplank</h3><p>Teras dan tepian. Cocokkan kebutuhan dengan detail pengikat dan finishing.</p><a href="#produk">Lihat material →</a></section>
-    </div>
-    <div class="features-row">
-      <section><span class="icon green">03</span><h3>Partition</h3><p>Partisi dan lining. Perhatikan rangka, sambungan dan gerak material.</p><a href="#produk">Lihat material →</a></section>
-      <section><span class="icon gold">04</span><h3>Cladding</h3><p>Eksterior dan pelapis dinding. Selalu verifikasi datasheet sistem.</p><a href="#produk">Lihat material →</a></section>
-    </div>
-  </section>
-
-  <section id="produk">
-    <header class="sectionHead"><h2>Katalog Material GRC</h2><p>Contoh SKU berdasarkan ketebalan. Harga dan stok belum diisi agar tidak mengarang data.</p></header>
-    <div class="row">
-      <div class="col-6"><article class="box special productCard"><div class="image featured"><img alt="GRC board untuk aplikasi interior dan plafon" src="https://www.easy.cl/_next/image?q=75&url=https%3A%2F%2Feasycl.vteximg.com.br%2Farquivos%2Fids%2F4804116%2F118530-0000-003.jpg%3Fv%3D638863542600470000&w=1080"></div><div class="cardBody"><span class="tag">INTERIOR</span><span class="tag">4–5 mm</span><h3>GRC 4–5 mm</h3><p>Contoh katalog untuk aplikasi interior dan ceiling.</p><div class="priceMissing">Harga & stok: belum terhubung</div><div class="productActions"><button class="button" onclick="askOrder('GRC 4–5 mm · GRC-INT-45')">Tanya</button><button class="button primary" onclick="openOrderForm('GRC 4–5 mm · GRC-INT-45')">Pilih</button></div></div></article></div>
-      <div class="col-6"><article class="box special productCard"><div class="image featured"><img alt="GRC board untuk aplikasi cover dan lisplank" src="https://supplymaster.store/cdn/shop/files/jib-jib-exterior-cement-board-1200-x-2400-mm-6-mm-turkey-made-1218864327.png?v=1769957649&width=1214"></div><div class="cardBody"><span class="tag">COVER</span><span class="tag">6 mm</span><h3>GRC 6 mm</h3><p>Contoh katalog untuk teras, lisplank atau sistem sejenis.</p><div class="priceMissing">Harga & stok: belum terhubung</div><div class="productActions"><button class="button" onclick="askOrder('GRC 6 mm · GRC-COV-06')">Tanya</button><button class="button primary" onclick="openOrderForm('GRC 6 mm · GRC-COV-06')">Pilih</button></div></div></article></div>
-      <div class="col-6"><article class="box special productCard"><div class="image featured"><img alt="GRC board untuk partisi dinding" src="https://images.satu.kz/237555911_w%24%7Bwidth%7D_h%24%7Bheight%7D_samostoyatelnyj-montazh-ftsp-panelej.jpg"></div><div class="cardBody"><span class="tag">WALL</span><span class="tag">8 mm</span><h3>GRC 8 mm</h3><p>Contoh katalog untuk partisi dan pelapis dinding.</p><div class="priceMissing">Harga & stok: belum terhubung</div><div class="productActions"><button class="button" onclick="askOrder('GRC 8 mm · GRC-WAL-08')">Tanya</button><button class="button primary" onclick="openOrderForm('GRC 8 mm · GRC-WAL-08')">Pilih</button></div></div></article></div>
-      <div class="col-6"><article class="box special productCard"><div class="image featured"><img alt="Papan fiber cement untuk cladding eksterior" src="https://supplymaster.store/cdn/shop/files/jib-jib-exterior-cement-board-1200-x-2400-mm-6-mm-turkey-made-1218864327.png?v=1769957649&width=1214"></div><div class="cardBody"><span class="tag">EXTERIOR</span><span class="tag">10 mm</span><h3>GRC 10 mm</h3><p>Contoh katalog untuk pekerjaan dinding/cladding sesuai spesifikasi.</p><div class="priceMissing">Harga & stok: belum terhubung</div><div class="productActions"><button class="button" onclick="askOrder('GRC 10 mm · GRC-EXT-10')">Tanya</button><button class="button primary" onclick="openOrderForm('GRC 10 mm · GRC-EXT-10')">Pilih</button></div></div></article></div>
-    </div>
-  </section>
-
-  <section id="hitung" class="box special toolBox">
-    <header class="major"><h2>Kalkulator Kebutuhan Awal</h2><p>Gunakan luas bidang, luas satu lembar dan waste untuk estimasi awal. Hasil bukan pengganti perhitungan lapangan atau datasheet.</p></header>
-    <div class="formgrid">
-      <div><label for="area">Luas bidang (m²)</label><input id="area" type="number" min="0" value="30"></div>
-      <div><label for="sheet">Luas 1 lembar (m²)</label><input id="sheet" type="number" min=".1" step=".01" value="2.88"></div>
-      <div><label for="waste">Waste (%)</label><input id="waste" type="number" min="0" value="10"></div>
-      <div><label for="app">Aplikasi</label><select id="app"><option>Ceiling</option><option>Partition</option><option>Cladding</option><option>Lisplank</option></select></div>
-    </div>
-    <div id="calcResult" class="result"></div>
-  </section>
-
-  <section id="ai" class="box special darkPanel toolBox">
-    <header class="major"><h2>AI Technical Companion</h2><p>Asisten offline/rule-based untuk alur Rp0. Tidak mengklaim koneksi AI provider live. Untuk keputusan teknis final, verifikasi datasheet produk.</p></header>
-    <div class="quick">
-      <button onclick="quick('Saya mau GRC untuk plafon interior. Ketebalan apa yang perlu dipertimbangkan?')">Plafon</button>
-      <button onclick="quick('Saya mau GRC untuk dinding eksterior. Apa yang perlu diperhatikan?')">Eksterior</button>
-      <button onclick="quick('Luas bidang saya 30 m². Bagaimana menghitung kebutuhan lembar GRC?')">Hitung</button>
-      <button onclick="quick('Berikan tips pemasangan GRC agar sambungan tidak mudah bermasalah.')">Pemasangan</button>
-    </div>
-    <div id="chat" class="aiChat"><div class="bubble">Halo. Sebutkan aplikasi, luas bidang, interior/eksterior dan ketebalan bila sudah diketahui. Saya bantu menyusun pertanyaan teknis dan estimasi awal.</div></div>
-    <div class="ask"><input id="question" placeholder="Contoh: kamar 4 × 5 m, plafon, pakai GRC..."><button class="button primary" onclick="askAI()">Tanya AI</button></div>
-  </section>
-
-  <section class="box special">
-    <header class="sectionHead"><h2>Visual Aplikasi GRC</h2><p>Gambar difokuskan pada material dan proses aplikasi GRC/fiber-cement board agar pengunjung langsung memahami konteks produk.</p></header>
-    <div class="row">
-      <div class="col-6"><article class="productCard"><div class="image featured"><img alt="Papan GRC sebagai material bangunan" src="https://www.grcboard.com/img/product/SERI%20PAPAN/Product.webp"></div><h3>Material GRC Board</h3><p>Visual material papan GRC untuk konteks katalog.</p></article></div>
-      <div class="col-6"><article class="productCard"><div class="image featured"><img alt="Pemasangan board pada fasad eksterior" src="https://supplymaster.store/cdn/shop/files/jib-jib-exterior-cement-board-1200-x-2400-mm-6-mm-turkey-made-1218864327.png?v=1769957649&width=1214"></div><h3>Cladding / Exterior</h3><p>Contoh proses pemasangan board pada rangka eksterior.</p></article></div>
-      <div class="col-6"><article class="productCard"><div class="image featured"><img alt="Pemasangan papan pada plafon" src="https://www.easy.cl/_next/image?q=75&url=https%3A%2F%2Feasycl.vteximg.com.br%2Farquivos%2Fids%2F4804116%2F118530-0000-003.jpg%3Fv%3D638863542600470000&w=1080"></div><h3>Ceiling</h3><p>Contoh pemasangan panel pada rangka plafon interior.</p></article></div>
-      <div class="col-6"><article class="productCard"><div class="image featured"><img alt="Partisi interior menggunakan panel GRC" src="https://i.ibb.co/YF6StYHj/Interior-office-space-with-installed-GRC-partition-walls-in-natural-daylight-61.jpg"></div><h3>Partition / Interior</h3><p>Contoh aplikasi panel sebagai bidang partisi interior.</p></article></div>
-    </div>
-  </section>
-
-  <section class="box special">
-    <header class="sectionHead"><h2>Panduan Pemasangan</h2><p>Struktur teknis yang perlu diperiksa sebelum pemesanan.</p></header>
-    <div class="row">
-      <div class="col-6"><h3>01 · Aplikasi</h3><p>Pastikan material sesuai interior, eksterior, ceiling, partition, cladding atau kebutuhan finishing.</p><h3>02 · Sistem</h3><p>Periksa rangka, jarak pengikat, sambungan, sekrup dan toleransi gerak.</p></div>
-      <div class="col-6"><h3>03 · Finish</h3><p>Gunakan jointing, sealant dan finishing sesuai sistem produk serta kondisi lapangan.</p><h3>04 · Datasheet</h3><p>Untuk aplikasi khusus atau eksterior, jadikan datasheet/ketentuan produsen sebagai acuan final.</p></div>
-    </div>
-  </section>
-
-  <section class="box special">
-    <header class="sectionHead"><h2>Referensi Aplikasi Material</h2><p>Visual digunakan sebagai referensi konteks aplikasi GRC/fiber-cement board; bukan klaim proyek aktual MuriaArch.</p></header>
-    <div class="row">
-      <div class="col-6"><article class="productCard"><div class="image featured"><img alt="Ilustrasi panel partition" src="https://www.easy.cl/_next/image?q=75&url=https%3A%2F%2Feasycl.vteximg.com.br%2Farquivos%2Fids%2F4804116%2F118530-0000-003.jpg%3Fv%3D638863542600470000&w=1080"></div><h3>Panel & Partition</h3><p>Contoh penggunaan panel pada rangka untuk kebutuhan partisi/interior.</p></article></div>
-      <div class="col-6"><article class="productCard"><div class="image featured"><img alt="Ilustrasi exterior cladding" src="https://i.ibb.co/YF6StYHj/Interior-office-space-with-installed-GRC-partition-walls-in-natural-daylight-61.jpg"></div><h3>Exterior Cladding</h3><p>Contoh penggunaan panel untuk dinding dan pelapis eksterior.</p></article></div>
-    </div>
-  </section>
-</section>
-
-<section id="kontak" class="box special contactPanel container">
-  <div class="contactGrid">
-    <div><h2>Konsultasikan kebutuhan proyek.</h2><p>Hubungi tim penjualan untuk harga, stok, spesifikasi, pengiriman dan penawaran proyek.</p><button class="button primary" onclick="openQuoteForm()">Buat Permintaan Penawaran</button></div>
-    <div>
-      <div class="contactItem"><span>WhatsApp / Telepon</span><b><a href="tel:+6281330438378" style="color:#fff;border-bottom:0">+62 813-3043-8378</a></b><button class="button" style="margin-top:.6em" onclick="openConsultationForm()">Konsultasi via WhatsApp →</button></div>
-      <div class="contactItem"><span>Email</span><b>Kontak melalui WhatsApp</b></div>
-      <div class="contactItem"><span>Layanan</span><b>Konfirmasi layanan melalui WhatsApp</b></div>
-    </div>
-  </div>
-</section>
-
-<section id="cta">
-  <h2>Siap menentukan material?</h2>
-  <p>Pilih produk, isi kebutuhan proyek dan kirim permintaan penawaran.</p>
-  <a class="button" href="#produk">Kembali ke Katalog</a>
-</section>
-
-<footer id="footer">
-  <div class="container">
-    <h3>MURIAARCH</h3>
-    <p>Website statis · GitHub Pages · tanpa hosting berbayar.</p>
-    <p class="copyright">Design base: Alpha by HTML5 UP, adapted for MuriaArch. HTML5 UP / CCA 3.0: html5up.net/license · © MuriaArch</p>
-  </div>
-</footer>
-</div>
-
-<div id="quoteModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
-  <div class="modalCard">
-    <div class="modalHead"><h3 id="quoteTitle">Permintaan Penawaran</h3><button onclick="closeOrderForm()">✕</button></div>
-    <div class="quoteForm">
-      <p id="formIntro" style="margin-bottom:1.2em">Isi data komersial dan kebutuhan proyek agar tim dapat menyiapkan penawaran yang lebih tepat.</p>
-      <div class="formgrid">
-        <div><label>Nama *</label><input id="qName" placeholder="Nama lengkap"></div>
-        <div><label>Perusahaan / Instansi</label><input id="qCompany" placeholder="Nama perusahaan / instansi"></div>
-        <div><label>No. WhatsApp *</label><input id="qPhone" placeholder="08xxxxxxxxxx"></div>
-        <div><label>Kota / Kabupaten Pengiriman *</label><input id="qCity" placeholder="Contoh: Jakarta Selatan"></div>
-        <div><label>Jenis Proyek</label><select id="qProject"><option>Rumah Tinggal</option><option>Komersial</option><option>Kontraktor / Developer</option><option>Instansi</option><option>Renovasi</option><option>Lainnya</option></select></div>
-        <div><label>Produk / Material *</label><select id="qProduct"><option>GRC 4–5 mm · GRC-INT-45</option><option>GRC 6 mm · GRC-COV-06</option><option>GRC 8 mm · GRC-WAL-08</option><option>GRC 10 mm · GRC-EXT-10</option><option>Belum menentukan · perlu konsultasi</option></select></div>
-        <div><label>Perkiraan luas / jumlah *</label><input id="qQty" placeholder="Contoh: 50 m² / 20 lembar"></div>
-        <div><label>Target pengiriman / kebutuhan</label><input id="qDate" placeholder="Contoh: November 2026"></div>
-        <div class="full"><label>Detail kebutuhan penawaran</label><textarea id="qNotes" rows="4" placeholder="Contoh: kebutuhan per m², jumlah lembar, spesifikasi, finishing, lokasi proyek, atau kebutuhan RAB."></textarea></div>
-      </div>
-    </div>
-    <div class="quoteActions"><button onclick="closeOrderForm()">Batal</button><button class="button primary" onclick="sendOrderRequest()">Kirim Permintaan Penawaran →</button></div>
-  </div>
-</div>
-
-<div id="consultationModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="consultationTitle">
-  <div class="modalCard">
-    <div class="modalHead"><h3 id="consultationTitle">Konsultasi Teknis GRC</h3><button onclick="closeConsultationForm()">✕</button></div>
-    <div class="quoteForm">
-      <p style="margin-bottom:1.2em">Form ini khusus untuk memahami kebutuhan teknis. Tidak perlu mengisi data penawaran atau jumlah pembelian terlebih dahulu.</p>
-      <div class="formgrid">
-        <div><label>Nama *</label><input id="cName" placeholder="Nama lengkap"></div>
-        <div><label>No. WhatsApp *</label><input id="cPhone" placeholder="08xxxxxxxxxx"></div>
-        <div><label>Lokasi / Kota Proyek *</label><input id="cCity" placeholder="Contoh: Depok"></div>
-        <div><label>Aplikasi GRC *</label><select id="cApplication"><option>Ceiling / Plafon</option><option>Partition / Partisi</option><option>Cladding / Eksterior</option><option>Lisplank</option><option>Dinding / Lining</option><option>Belum yakin · minta rekomendasi</option></select></div>
-        <div><label>Kondisi penggunaan</label><select id="cEnvironment"><option>Interior</option><option>Eksterior</option><option>Area lembap</option><option>Belum ditentukan</option></select></div>
-        <div><label>Perkiraan luas bidang</label><input id="cArea" placeholder="Contoh: 30 m²"></div>
-        <div class="full"><label>Ukuran / kondisi bidang</label><input id="cDimension" placeholder="Contoh: ruang 4 × 5 m, tinggi 3 m, rangka hollow sudah tersedia"></div>
-        <div class="full"><label>Pertanyaan teknis *</label><textarea id="cQuestion" rows="5" placeholder="Contoh: ketebalan yang cocok, jenis rangka, jarak pengikat, sambungan, finishing, atau cara menghitung kebutuhan."></textarea></div>
-      </div>
-    </div>
-    <div class="quoteActions"><button onclick="closeConsultationForm()">Batal</button><button class="button primary" onclick="sendConsultationRequest()">Kirim Konsultasi ke WhatsApp →</button></div>
-  </div>
-</div>
-
+<body>
+<div class="topbar"><div class="container"><span>Solusi elemen arsitektur eksterior</span><span>Kerawangan masjid · Kubah · Lisplang · Ornamen fasad</span></div></div>
+<div class="nav-wrap"><nav class="container" aria-label="Navigasi utama">
+<a class="brand" href="#beranda"><span class="brand-mark">MA</span><span>MURIAARCH<small>Architectural Exterior Solutions</small></span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+<div class="navlinks" id="navLinks"><a href="#layanan">Layanan</a><a href="#tentang">Tentang Kami</a><a href="#proses">Alur Proyek</a><a href="#galeri">Galeri Referensi</a><a class="btn btn-primary" href="#kontak">Konsultasikan Proyek ↗</a></div>
+</nav></div>
+<main>
+<section class="hero" id="beranda"><div class="hero-photo" role="img" aria-label="Referensi visual arsitektur masjid dan eksterior"></div><div class="container hero-inner"><div class="hero-copy">
+<div class="eyebrow">Detail eksterior. Identitas bangunan.</div>
+<h1>Membentuk karakter bangunan lewat <em>detail arsitektur.</em></h1>
+<p>MuriaArch berfokus pada elemen eksterior dekoratif—dari kerawangan masjid, kubah, lisplang hingga ornamen fasad—dengan perhatian pada estetika, fungsi, dan kebutuhan setiap proyek.</p>
+<div class="hero-actions"><a class="btn btn-gold" href="#kontak">Diskusikan Proyek Anda <span>↗</span></a><a class="btn btn-outline" href="#layanan">Jelajahi Layanan ↓</a></div>
+<div class="hero-note"><span><b>◆</b> Konsultasi kebutuhan proyek</span><span><b>◆</b> Opsi desain dan material</span><span><b>◆</b> Permintaan penawaran</span></div>
+</div></div></section>
+<section class="trust-strip"><div class="container trust-grid">
+<div class="trust-item"><span class="trust-icon">⌘</span><span><strong>Kerawangan & panel dekoratif</strong><small>Komposisi pola dan bukaan</small></span></div>
+<div class="trust-item"><span class="trust-icon">◉</span><span><strong>Kubah & elemen masjid</strong><small>Fokus pada siluet bangunan</small></span></div>
+<div class="trust-item"><span class="trust-icon">⌂</span><span><strong>Lisplang & profil</strong><small>Finishing tepi atap</small></span></div>
+<div class="trust-item"><span class="trust-icon">✧</span><span><strong>Ornamen fasad</strong><small>Detail eksterior yang serasi</small></span></div>
+</div></section>
+<section class="section" id="layanan"><div class="container">
+<div class="section-head"><div class="eyebrow">Ruang lingkup layanan</div><h2>Elemen eksterior yang memperkuat identitas bangunan.</h2><p>Mulai dari kebutuhan masjid hingga fasad bangunan komersial dan hunian. Pilihan material, detail, dan metode pemasangan perlu disesuaikan dengan gambar kerja, lokasi, serta kondisi lapangan.</p></div>
+<div class="services">
+<article class="service-card"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=80" alt="Referensi visual arsitektur masjid" onerror="this.style.display='none'"><span class="service-number">01 / MASJID</span></div><div class="service-content"><h3>Kerawangan Masjid</h3><p>Panel berlubang dan pola dekoratif untuk ventilasi, penyaring cahaya, serta aksen fasad. Pola dan ukuran disesuaikan dengan konsep desain.</p><a class="text-link" href="#kontak" data-service="Kerawangan Masjid">Konsultasikan kebutuhan <span>→</span></a></div></article>
+<article class="service-card"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=900&q=80" alt="Referensi bentuk arsitektur kubah" onerror="this.style.display='none'"><span class="service-number">02 / KUBAH</span></div><div class="service-content"><h3>Kubah & Elemen Atap Masjid</h3><p>Diskusi kebutuhan bentuk, ukuran, tampilan, sistem pendukung, dan finishing kubah sesuai kondisi bangunan serta rancangan proyek.</p><a class="text-link" href="#kontak" data-service="Kubah dan elemen atap masjid">Konsultasikan kebutuhan <span>→</span></a></div></article>
+<article class="service-card"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80" alt="Referensi detail fasad bangunan" onerror="this.style.display='none'"><span class="service-number">03 / LISPLANG</span></div><div class="service-content"><h3>Lisplang & Profil Eksterior</h3><p>Elemen tepi atap dan profil dekoratif untuk menciptakan garis bangunan yang rapi dan proporsional.</p><a class="text-link" href="#kontak" data-service="Lisplang dan profil eksterior">Konsultasikan kebutuhan <span>→</span></a></div></article>
+<article class="service-card"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Referensi desain arsitektur eksterior" onerror="this.style.display='none'"><span class="service-number">04 / FASAD</span></div><div class="service-content"><h3>Ornamen & Fasad Bangunan</h3><p>Aksen geometris, bingkai, profil, dan detail dekoratif untuk menyatukan karakter eksterior dengan konsep arsitektur.</p><a class="text-link" href="#kontak" data-service="Ornamen dan fasad bangunan">Konsultasikan kebutuhan <span>→</span></a></div></article>
+<article class="service-card"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Referensi eksterior bangunan hunian" onerror="this.style.display='none'"><span class="service-number">05 / PANEL</span></div><div class="service-content"><h3>Panel & Cladding Eksterior</h3><p>Diskusi opsi panel untuk kebutuhan eksterior dengan mempertimbangkan paparan cuaca, sistem rangka, sambungan, dan finishing.</p><a class="text-link" href="#kontak" data-service="Panel dan cladding eksterior">Konsultasikan kebutuhan <span>→</span></a></div></article>
+<article class="service-card"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=80" alt="Referensi detail arsitektur modern" onerror="this.style.display='none'"><span class="service-number">06 / KHUSUS</span></div><div class="service-content"><h3>Detail Custom sesuai Desain</h3><p>Pembahasan kebutuhan khusus berdasarkan foto lokasi, gambar kerja, dimensi, target hasil, dan batasan teknis proyek.</p><a class="text-link" href="#kontak" data-service="Detail custom sesuai desain">Konsultasikan kebutuhan <span>→</span></a></div></article>
+</div></div></section>
+<section class="section about" id="tentang"><div class="container about-grid"><div class="about-visual"><div class="about-main"><img loading="lazy" src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1100&q=85" alt="Referensi visual detail arsitektur bangunan" onerror="this.style.display='none'"></div><div class="about-card"><strong>Dirancang untuk proyek Anda</strong><p>Setiap rekomendasi perlu mempertimbangkan desain, ukuran, lokasi, dan kebutuhan penggunaan.</p></div></div><div><div class="eyebrow">Tentang MuriaArch</div><h2>Detail yang indah harus tetap mempertimbangkan fungsi.</h2><p>MuriaArch memusatkan layanan pada kebutuhan elemen eksterior dan ornamen arsitektur. Kami ingin membantu pemilik proyek, arsitek, kontraktor, pengurus masjid, dan pengembang menjabarkan kebutuhan menjadi ruang lingkup pekerjaan yang lebih jelas.</p><ul class="check-list"><li><span class="check">✓</span><span><b>Pembahasan berdasarkan kebutuhan.</b><br>Mulai dari fungsi elemen, gaya desain, dimensi, dan referensi visual.</span></li><li><span class="check">✓</span><span><b>Pertimbangan material dan lingkungan.</b><br>Material serta sistem pemasangan harus sesuai aplikasi dan paparan cuaca.</span></li><li><span class="check">✓</span><span><b>Ruang lingkup lebih terarah.</b><br>Informasi lokasi, ukuran, gambar, dan target waktu membantu proses penawaran.</span></li></ul><a class="btn btn-primary" href="#kontak">Ceritakan Proyek Anda ↗</a></div></div></section>
+<section class="section" id="proses"><div class="container"><div class="section-head center"><div class="eyebrow">Alur kerja</div><h2>Dari ide awal menuju ruang lingkup proyek.</h2><p>Informasi yang cukup sejak awal membantu pembahasan desain, kebutuhan material, dan estimasi pekerjaan.</p></div><div class="process-grid">
+<div class="process-card"><div class="step">01</div><h3>Ceritakan kebutuhan</h3><p>Pilih jenis pekerjaan, jelaskan fungsi, gaya yang diinginkan, dan lokasi proyek.</p></div>
+<div class="process-card"><div class="step">02</div><h3>Kirim referensi</h3><p>Tambahkan foto lokasi, gambar, ukuran, atau contoh pola bila tersedia.</p></div>
+<div class="process-card"><div class="step">03</div><h3>Diskusi teknis</h3><p>Bahas opsi desain, material, detail pemasangan, dan informasi yang masih diperlukan.</p></div>
+<div class="process-card"><div class="step">04</div><h3>Permintaan penawaran</h3><p>Ruang lingkup, kuantitas, lokasi, dan target waktu menjadi dasar pembahasan penawaran.</p></div>
+</div></div></section>
+<section class="section gallery" id="galeri"><div class="container"><div class="section-head"><div class="eyebrow">Inspirasi visual</div><h2>Referensi karakter eksterior.</h2><p>Contoh visual untuk membantu membahas gaya, komposisi, dan detail. Foto-foto ini bersifat ilustratif, bukan dokumentasi pekerjaan yang telah diselesaikan MuriaArch.</p></div><div class="gallery-grid">
+<div class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1000&q=80" alt="Referensi arsitektur masjid" onerror="this.style.display='none'"><span class="gallery-label">Arsitektur masjid</span></div>
+<div class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80" alt="Referensi komposisi fasad" onerror="this.style.display='none'"><span class="gallery-label">Komposisi fasad</span></div>
+<div class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=80" alt="Referensi detail bangunan" onerror="this.style.display='none'"><span class="gallery-label">Detail arsitektur</span></div>
+<div class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Referensi desain eksterior" onerror="this.style.display='none'"><span class="gallery-label">Bahasa desain modern</span></div>
+<div class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Referensi bangunan dan lingkungan" onerror="this.style.display='none'"><span class="gallery-label">Material & lingkungan</span></div>
+</div><p class="gallery-caption">Foto referensi bersumber dari Unsplash. Pastikan lisensi dan atribusi aset diperiksa kembali sebelum penggunaan komersial jangka panjang. Ganti dengan dokumentasi proyek MuriaArch sendiri saat tersedia.</p></div></section>
+<section class="cta-band"><div class="container cta-flex"><div><h2>Punya desain masjid atau fasad yang ingin diwujudkan?</h2><p>Kirim kebutuhan awal dan referensi proyek untuk memulai pembahasan.</p></div><div class="cta-actions"><a class="btn btn-gold" href="#kontak">Minta Penawaran ↗</a><a class="btn btn-outline" href="#kontak" data-mode="consultation">Konsultasi Teknis</a></div></div></section>
+<section class="section" id="faq"><div class="container faq-grid"><div><div class="eyebrow">Pertanyaan umum</div><h2>Mulai dengan informasi yang tepat.</h2><p>Belum memiliki gambar kerja lengkap? Anda tetap dapat memulai dengan menjelaskan ide dan kebutuhan dasar proyek.</p><a class="text-link" href="#kontak">Tanyakan kebutuhan Anda →</a></div><div class="faq-list">
+<details><summary>Apakah MuriaArch melayani kerawangan masjid custom?</summary><p>Anda dapat mengirimkan ukuran, pola referensi, lokasi, dan fungsi panel untuk dibahas. Kelayakan material dan metode produksi perlu dikonfirmasi berdasarkan kebutuhan proyek.</p></details>
+<details><summary>Informasi apa yang diperlukan untuk penawaran?</summary><p>Jenis pekerjaan, lokasi, dimensi atau luas, kuantitas, foto/gambar referensi, finishing yang diinginkan, serta target waktu jika sudah diketahui.</p></details>
+<details><summary>Apakah material untuk eksterior harus tahan cuaca?</summary><p>Pemilihan material harus mengikuti paparan hujan, panas, kelembapan, sistem pemasangan, dan panduan teknis produk. Jangan menganggap semua material GRC atau panel cocok untuk setiap kondisi tanpa verifikasi.</p></details>
+<details><summary>Apakah harga dan stok tersedia di website?</summary><p>Harga, ketersediaan, cakupan pekerjaan, dan estimasi waktu belum ditampilkan sebagai data live. Silakan kirim permintaan agar detail proyek dapat ditinjau sebelum penawaran dikonfirmasi.</p></details>
+</div></div></section>
+<section class="section contact" id="kontak"><div class="container"><div class="section-head"><div class="eyebrow">Hubungi MuriaArch</div><h2>Jelaskan kebutuhan proyek Anda.</h2><p>Gunakan formulir yang sesuai: konsultasi untuk pertanyaan desain/teknis, atau penawaran untuk permintaan estimasi pekerjaan. Setelah dikirim, WhatsApp akan terbuka dengan ringkasan informasi yang Anda isi.</p></div><div class="contact-grid">
+<div class="contact-panel"><div class="eyebrow">Diskusi proyek</div><h3>Setiap proyek punya detail berbeda.</h3><p>Semakin lengkap informasi awal yang diberikan, semakin terarah pembahasan berikutnya.</p><div class="contact-row"><span>✆</span><div><b>WhatsApp MuriaArch</b><small>+62 813-3043-8378</small></div></div><div class="contact-row"><span>⌖</span><div><b>Lokasi proyek</b><small>Informasikan kota/kabupaten pada formulir</small></div></div><div class="contact-row"><span>▧</span><div><b>Referensi gambar</b><small>Anda dapat melampirkan foto/gambar setelah percakapan WhatsApp terbuka.</small></div></div></div>
+<div class="form-card"><div class="form-grid" style="margin-bottom:20px"><div class="field"><label for="formMode">Jenis permintaan</label><select id="formMode"><option value="consultation">Konsultasi teknis / desain</option><option value="quote">Permintaan penawaran proyek</option></select></div><div class="field"><label for="projectType">Jenis pekerjaan</label><select id="projectType"><option>Kerawangan masjid</option><option>Kubah masjid</option><option>Lisplang dan profil</option><option>Ornamen / fasad</option><option>Panel / cladding eksterior</option><option>Pekerjaan custom lainnya</option></select></div></div>
+<form id="projectForm"><div class="form-grid">
+<div class="field"><label for="fullName">Nama *</label><input id="fullName" name="fullName" autocomplete="name" required placeholder="Nama Anda"></div>
+<div class="field"><label for="phone">Nomor WhatsApp *</label><input id="phone" name="phone" autocomplete="tel" required placeholder="08xxxxxxxxxx"></div>
+<div class="field"><label for="city">Kota / Kabupaten proyek *</label><input id="city" name="city" required placeholder="Contoh: Kudus, Jawa Tengah"></div>
+<div class="field"><label for="quantity">Ukuran / perkiraan jumlah</label><input id="quantity" name="quantity" placeholder="Contoh: 20 m² atau 1 unit"></div>
+<div class="field"><label for="targetDate">Target waktu</label><input id="targetDate" name="targetDate" placeholder="Contoh: Oktober 2026"></div>
+<div class="field"><label for="material">Material / finishing (jika tahu)</label><input id="material" name="material" placeholder="Opsional"></div>
+<div class="field full"><label for="details" id="detailsLabel">Pertanyaan teknis / desain *</label><textarea id="details" name="details" required placeholder="Jelaskan kebutuhan, gaya, fungsi, atau kendala yang ingin didiskusikan..."></textarea></div>
+</div><p class="form-note" id="formNote">Untuk konsultasi, jelaskan pertanyaan, lokasi, dan kondisi bangunan. Jangan mengirimkan informasi rahasia.</p><button class="btn btn-primary" type="submit" id="submitBtn">Lanjutkan ke WhatsApp ↗</button><div class="form-status" id="formStatus" role="status" aria-live="polite"></div></form>
+</div></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="#beranda" style="color:#fff"><span class="brand-mark">MA</span><span>MURIAARCH<small style="color:#b9c9bf">Architectural Exterior Solutions</small></span></a><p style="margin-top:18px;max-width:360px">Spesialis elemen eksterior dekoratif: kerawangan masjid, kubah, lisplang, ornamen fasad, dan kebutuhan arsitektur custom.</p></div><div><h3>Layanan</h3><div class="footer-links"><a href="#layanan">Kerawangan Masjid</a><a href="#layanan">Kubah & Elemen Atap</a><a href="#layanan">Lisplang & Profil</a><a href="#layanan">Ornamen Fasad</a></div></div><div><h3>Mulai Proyek</h3><div class="footer-links"><a href="#proses">Alur Proyek</a><a href="#galeri">Galeri Referensi</a><a href="#faq">Pertanyaan Umum</a><a href="#kontak">Hubungi MuriaArch</a></div></div></div><div class="footer-bottom"><span>© <span id="year"></span> MuriaArch. Hak cipta konten dan identitas merek dilindungi.</span><span>Desain web: implementasi orisinal dengan referensi UX/UI template MIT.</span></div></div></footer>
+<a class="wa-float" href="https://wa.me/6281330438378?text=Halo%20MuriaArch%2C%20saya%20ingin%20konsultasi%20proyek%20eksterior." target="_blank" rel="noopener noreferrer" aria-label="Hubungi MuriaArch melalui WhatsApp">☏ WhatsApp</a>
 <script>
-const SALES={whatsapp:"6281330438378"};
 const $=id=>document.getElementById(id);
-function openWhatsApp(message){const n=SALES.whatsapp;if(!n){alert("Nomor WhatsApp sales belum diisi.");return}window.open("https://wa.me/"+n+"?text="+encodeURIComponent(message),"_blank","noopener")}
-function openOrderForm(product=""){ $("quoteModal").classList.add("open"); if(product){const s=$("qProduct");[...s.options].some(o=>{if(o.textContent.startsWith(product)){s.value=o.value;return true}return false})} $("qName").focus() }
-function openQuoteForm(product=""){openOrderForm(product)}
-function closeOrderForm(){ $("quoteModal").classList.remove("open") }
-function openConsultationForm(){ $("consultationModal").classList.add("open"); $("cName").focus() }
-function closeConsultationForm(){ $("consultationModal").classList.remove("open") }
-function sendOrderRequest(){const v=id=>$(id).value.trim();const name=v("qName"),phone=v("qPhone"),company=v("qCompany"),city=v("qCity"),project=v("qProject"),product=v("qProduct"),qty=v("qQty"),date=v("qDate"),notes=v("qNotes");if(!name||!phone||!city||!qty){alert("Lengkapi Nama, No. WhatsApp, Kota/Kabupaten Pengiriman, dan Perkiraan luas/jumlah.");return}const oid="GRC-Q-"+new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);const msg=["MURIAARCH","PERMINTAAN PENAWARAN PROYEK","Nomor Referensi: "+oid,"","DATA PEMOHON","Nama: "+name,"Perusahaan/Instansi: "+(company||"-"),"No. WhatsApp: "+phone,"Kota/Kabupaten Pengiriman: "+city,"Jenis Proyek: "+project,"","KEBUTUHAN KOMERSIAL","Produk/Material: "+product,"Perkiraan Luas/Jumlah: "+qty,"Target Pengiriman/Kebutuhan: "+(date||"-"),"","DETAIL KEBUTUHAN",notes||"-","","MOHON DIBANTU","- Harga dan penawaran resmi","- Ketersediaan / jumlah stok","- Minimum order bila ada","- Estimasi pengiriman ke lokasi proyek","- Syarat pembayaran dan proses pemesanan","","Terima kasih. Mohon konfirmasi dari tim MuriaArch.","MuriaArch"].join("\n");closeOrderForm();openWhatsApp(msg)}
-function sendConsultationRequest(){const v=id=>$(id).value.trim();const name=v("cName"),phone=v("cPhone"),city=v("cCity"),application=v("cApplication"),environment=v("cEnvironment"),area=v("cArea"),dimension=v("cDimension"),question=v("cQuestion");if(!name||!phone||!city||!question){alert("Lengkapi Nama, No. WhatsApp, Lokasi/Kota Proyek, dan Pertanyaan Teknis.");return}const oid="GRC-C-"+new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);const msg=["MURIAARCH","PERMINTAAN KONSULTASI TEKNIS","Nomor Referensi: "+oid,"","DATA PEMOHON","Nama: "+name,"No. WhatsApp: "+phone,"Lokasi/Kota Proyek: "+city,"","KONTEKS TEKNIS","Aplikasi GRC: "+application,"Kondisi Penggunaan: "+environment,"Perkiraan Luas: "+(area||"-"),"Ukuran/Kondisi Bidang: "+(dimension||"-"),"","PERTANYAAN TEKNIS",question,"","MOHON DIBANTU","- Rekomendasi material / ketebalan yang sesuai","- Pertimbangan sistem rangka dan pemasangan","- Perhitungan kebutuhan awal bila datanya cukup","- Catatan datasheet atau hal yang perlu diverifikasi","","Terima kasih. Mohon arahan dari tim MuriaArch.","MuriaArch"].join("\n");closeConsultationForm();openWhatsApp(msg)}
-function askOrder(name){openConsultationForm()}
-function calc(){const a=+($("area").value)||0,s=+($("sheet").value)||1,w=+($("waste").value)||0;const n=Math.ceil(a*(1+w/100)/s);$("calcResult").textContent="Perkiraan awal: "+n+" lembar · "+(a*(1+w/100)).toFixed(1)+" m² termasuk waste "+w+"%"}
-["area","sheet","waste"].forEach(id=>$(id).addEventListener("input",calc));calc();
-function addMsg(text,me=false){const d=document.createElement("div");d.className="bubble"+(me?" me":"");d.textContent=text;$("chat").appendChild(d);$("chat").scrollTop=$("chat").scrollHeight}
-function quick(text){$("question").value=text;askAI()}
-function askAI(){const q=$("question").value.trim();if(!q)return;addMsg(q,true);$("question").value="";const loading=document.createElement("div");loading.className="bubble";loading.textContent="Menyiapkan panduan teknis…";$("chat").appendChild(loading);$("chat").scrollTop=$("chat").scrollHeight;setTimeout(()=>{const t=q.toLowerCase();let a="Sebutkan aplikasi, luas bidang, interior/eksterior, ukuran lembar bila diketahui dan kebutuhan pemasangan agar rekomendasi lebih tepat.";if(t.includes("plafon")||t.includes("ceiling"))a="Untuk plafon interior, mulai dari luas bidang dan kondisi rangka. Contoh katalog menempatkan GRC 4–5 mm sebagai pilihan awal; verifikasi datasheet produk, jarak rangka, pengikat, sambungan dan beban sebelum pemasangan.";else if(t.includes("eksterior")||t.includes("cladding"))a="Untuk eksterior/cladding, jangan menentukan ketebalan hanya dari angka mm. Periksa datasheet, sistem rangka, jarak pengikat, sambungan, sealant, paparan cuaca dan detail drainase.";else if(t.includes("hitung")||t.includes("lembar")||t.includes("luas")||t.includes("m²"))a="Gunakan kalkulator: luas bidang × (1 + waste), kemudian bagi luas satu lembar dan bulatkan ke atas. Tambahkan cadangan sesuai pola potongan dan kondisi lapangan.";else if(t.includes("pasang")||t.includes("sekrup")||t.includes("sambungan"))a="Periksa rangka, jarak pengikat, posisi sambungan, jointing, sealant dan finishing sesuai sistem produk. Jangan memakai satu ukuran sekrup atau jarak rangka untuk semua produk.";loading.textContent=a},350)}
-$("quoteModal").addEventListener("click",e=>{if(e.target.id==="quoteModal")closeOrderForm()});$("consultationModal").addEventListener("click",e=>{if(e.target.id==="consultationModal")closeConsultationForm()});
+const menuToggle=$("menuToggle"),navLinks=$("navLinks");
+menuToggle.addEventListener("click",()=>{const open=navLinks.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open));menuToggle.textContent=open?"×":"☰"});
+navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");menuToggle.textContent="☰"}));
+$("year").textContent=new Date().getFullYear();
+document.querySelectorAll("[data-service]").forEach(a=>a.addEventListener("click",()=>{$("projectType").value=a.dataset.service;$("formMode").value="consultation";updateMode()}));
+document.querySelectorAll("[data-mode='consultation']").forEach(a=>a.addEventListener("click",()=>{$("formMode").value="consultation";updateMode()}));
+function updateMode(){const quote=$("formMode").value==="quote";$("detailsLabel").textContent=quote?"Ruang lingkup pekerjaan yang diminta *":"Pertanyaan teknis / desain *";$("details").placeholder=quote?"Jelaskan spesifikasi, pola, finishing, volume, gambar kerja, dan kebutuhan penawaran...":"Jelaskan kebutuhan, gaya, fungsi, atau kendala yang ingin didiskusikan...";$("formNote").textContent=quote?"Untuk penawaran, masukkan volume, spesifikasi, finishing, dan informasi gambar kerja yang tersedia. Harga dan jadwal akan dikonfirmasi setelah peninjauan.":"Untuk konsultasi, jelaskan pertanyaan, lokasi, dan kondisi bangunan. Jangan mengirimkan informasi rahasia.";$("submitBtn").textContent=quote?"Kirim Permintaan Penawaran ↗":"Lanjutkan Konsultasi via WhatsApp ↗"}
+$("formMode").addEventListener("change",updateMode);updateMode();
+$("projectForm").addEventListener("submit",e=>{e.preventDefault();const val=id=>$(id).value.trim();const mode=$("formMode").value,quote=mode==="quote",name=val("fullName"),phone=val("phone"),city=val("city"),type=val("projectType"),quantity=val("quantity"),target=val("targetDate"),material=val("material"),details=val("details");if(!name||!phone||!city||!details){$("formStatus").textContent="Lengkapi semua kolom wajib sebelum melanjutkan.";return}const ref=(quote?"MA-Q-":"MA-C-")+new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);const msg=["MURIAARCH",quote?"PERMINTAAN PENAWARAN PROYEK":"PERMINTAAN KONSULTASI TEKNIS","Referensi: "+ref,"","Nama: "+name,"WhatsApp pemohon: "+phone,"Lokasi proyek: "+city,"Jenis pekerjaan: "+type,"Ukuran / perkiraan jumlah: "+(quantity||"-"),"Target waktu: "+(target||"-"),"Material / finishing: "+(material||"-"),"",quote?"RUANG LINGKUP PENAWARAN":"PERTANYAAN / KEBUTUHAN TEKNIS",details,"","Mohon bantu tinjau kebutuhan ini dan informasikan langkah berikutnya. Harga, material, cakupan pekerjaan, dan jadwal perlu dikonfirmasi setelah peninjauan."].join("\n");$("formStatus").textContent="Ringkasan siap. WhatsApp akan dibuka pada tab baru.";window.open("https://wa.me/6281330438378?text="+encodeURIComponent(msg),"_blank","noopener,noreferrer")});
 </script>
 </body>
 </html>
