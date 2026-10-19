@@ -10,7 +10,10 @@ Proyek ini ditargetkan **Rp0** untuk tahap awal:
 - Hosting publik: GitHub Pages
 - Frontend: HTML/CSS/JavaScript statis
 - Order/quotation awal: WhatsApp
-- AI Companion: mode offline/rule-based pada versi GitHub Pages
+- AI Companion: mode pengetahuan tertanam/rule-based pada GitHub Pages; mendukung chat teks, pembacaan jawaban melalui Speech Synthesis, dan input suara jika browser mendukung Web Speech API
+- Basis pengetahuan awal: `knowledge/muria-arch-ai-knowledge.json` (GRC/GFRC, kerawangan custom, data penawaran, harga, finishing, kubah, lisplang, pemasangan, perawatan, dan batas keselamatan)
+- Literatur rujukan awal: GRCA technical publications/FAQs/technical notes dan PCI MNL-128 serta ANSI/PCI 128-24; tautan ada dalam basis pengetahuan
+- Mode versi ini tidak memakai model AI cloud dan tidak menyimpan percakapan ke server. Jawaban dibentuk dari basis pengetahuan tertanam; pertanyaan di luar cakupan harus dikonfirmasi tim Muria-Arch.
 - Tidak bergantung pada Hatchable untuk hosting publik
 - Tidak memerlukan VPS, database berbayar, atau API AI berbayar
 
